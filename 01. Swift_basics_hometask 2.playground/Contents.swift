@@ -9,26 +9,26 @@ import Darwin.C.math // Библиотека, которая поможет Ва
 
 
 // MARK: не нужно объявлять var, если значение не изменяется. Лучше объявлять let, потому что для него меньше памяти выделяется :)
-let a = Int(2)
-let b = Int(3)
-
-let result = (a + 43) * (a - 33)
- 
-print(result)
-
-
-
-
-// MARK: - Task 2.
-//: Объявите переменные c и d присвойте им значения 2.75 и 4.25.
-//: Вычислите значение уравнения 2 x (c+1) + 3 x (d+1) и выведите результат на консоль.
-// Решение оформите ниже
-let c = Double(2.75)
-let d = Double(4.25)
-
-let meaning = 2 * (c + 1) + 3 * (d + 1)
-
-print(meaning)
+//let a = Int(2)
+//let b = Int(3)
+//
+//let result = (a + 43) * (a - 33)
+// 
+//print(result)
+//
+//
+//
+//
+//// MARK: - Task 2.
+////: Объявите переменные c и d присвойте им значения 2.75 и 4.25.
+////: Вычислите значение уравнения 2 x (c+1) + 3 x (d+1) и выведите результат на консоль.
+//// Решение оформите ниже
+//let c = Double(2.75)
+//let d = Double(4.25)
+//
+//let meaning = 2 * (c + 1) + 3 * (d + 1)
+//
+//print(meaning)
 
 
 
@@ -48,10 +48,23 @@ print(meaning)
         // Создаем форматтер для извлечения информации о дате
         // let dateFormatter = DateFormatter()
         // Дальше задаешь необходимый формат даты и выводишь его
-let currentData  = "16."
-let currentMonth = "August."
-let currentYear  = "2023."
-print(currentYear, currentMonth, currentData)
+//let Data  = "Data"
+//let Month = "Month"
+//let Year  = "Year"
+//print(currentYear, currentMonth, currentData)
+
+//В сети нашел пример, от которого смог отталкнуться и получилось вот так, конечно не уверен что именно так нужно было
+let currentDate = Date()
+let dateFormatter = DateFormatter()
+let year = dateFormatter.string(from: currentDate)
+
+dateFormatter.dateFormat = "MMMM"
+let month = dateFormatter.string(from: currentDate)
+
+dateFormatter.dateFormat = "yyyy MMMM d"
+let formatedDate = dateFormatter.string(from: currentDate)
+
+print("Текущая дата: \(formatedDate)")
 
 
 
@@ -75,6 +88,13 @@ print(currentYear, currentMonth, currentData)
 // MARK: Как пример - объявление явно/неявно переменных, глядя на то, как закоменченый код был написан
 var firstVariable: Int = 5 // Явное задание типа
 var secondVariable = 10     // Неявное задание типа
+var buffer = firstVariable
+firstVariable = secondVariable
+secondVariable = buffer
+
+print("Первая переменная: \(firstVariable)")
+print("Вторая переменная: \(secondVariable)")
+
 
 
 
@@ -92,6 +112,7 @@ var secondVariable = 10     // Неявное задание типа
 
 
 // MARK: так переменные никогда не пишутся. По стилям между типом переменной и знаком равно -> ОДИН пробел
+//Исправил
 let one: Int = 18
 let two: Float = 16.4
 let three: Double = 5.7
@@ -114,11 +135,14 @@ print(anotherSumm, increase, division)
 // MARK: по-моему тут четные ищутся? Плюс надо из двух рандомных чисел. Рандомное число можно найти так: Int.random(in: 1...100)
 // MARK: должен быть не массив, а два числа. Дальше проверку делаешь
 
-var targetOne = Int.random(in: 1...100)
-if (targetOne % 2 != 1 ) {
-    print("Четное")
+//Исправил, немного пришлось подумать, как сделать правильно проверку
+let targetOne = Int.random(in: 1...100) * 2
+let targetTwo = Int.random(in: 1...100) * 2 + 1
+
+if ((targetOne % targetTwo ) == 1) {
+    print("Четное: \(targetOne)")
 } else {
-    print("Нечетное")
+    print("Нечетное: \(targetTwo)")
 }
 
 
@@ -131,11 +155,16 @@ if (targetOne % 2 != 1 ) {
 //: Вводятся три разных числа. Определите, какое из них является средним (больше одного, но меньше другого).
 // Результат выведите в консоль
 // Сделайте это для разных числовых типов
-let rectangleA = 110
+let rectangleA = 112
 let rectangleB = 111
-let rectangleC = 109
+let rectangleC = 100
 
 // MARK: подозреваю, что задание не понято верно. Нужно принтануть одно значение, которое будет средним
+//Блин, пришлось попотеть чтобы найти более простой способ, смотрю на предыдущий и понимаю какой же он грамоздкий хоть и работает)
+
+let median = [rectangleA, rectangleB, rectangleC].sorted()[1]
+print("Среднее число: \(median)")
+
 
 if ((rectangleA > rectangleB) && (rectangleA < rectangleC)) || ((rectangleA < rectangleB) && (rectangleA > rectangleC)) {
     print(rectangleA)
@@ -171,7 +200,7 @@ print(gb, "ГБ")
 //: Проверьте, делится ли первое число на второе.
 // Результат выведите в консоль
 // В ответ включите сам результат и остаток от деления (если он есть).
-var pointOne = 186
+var pointOne = 191
 var pointTwo = 25
 var pointThree = Double(pointOne) / Double(pointTwo)
 // MARK: - не нужно так мгного скобок, свифт поймет и (pointOne / pointTwo) != 0
@@ -199,3 +228,28 @@ if remainder == 0 {
 //: 2. Найти корни квадратного уравнения и вывести их на экран, если они есть.
 //: 3. Если корней нет, то вывести сообщение об этом.
 // Результат в консоль
+
+//Квадратное уравнение -> AX^2 + BX + C = 0
+//Нашел пример на кодворс и уже от него отталкивался, сам не смог сделать
+let a = 1
+let b = 8
+let c = 6
+
+// Выводим получившееся уравнение на консоль
+print("Уравнение: \(a)x^2 + \(b)x + \(c) = 0")
+
+// Вычисление дискриминанта
+let discriminant = b * b - 4 * a * c
+
+// Проверка дискриминанта и нахождение корней
+if discriminant > 0 {
+    let x1 = (-b + (discriminant)) / (2 * a)
+    let x2 = (-b - (discriminant)) / (2 * a)
+    print("Корни уравнения: x1 = \(x1), x2 = \(x2)")
+} else if discriminant == 0 {
+    let x = -b / (2 * a)
+    print("Уравнение имеет единственный корень: x = \(x)")
+} else {
+    print("Уравнение не имеет действительных корней")
+}
+
