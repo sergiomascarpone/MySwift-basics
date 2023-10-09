@@ -12,7 +12,14 @@ import UIKit
 
 //MARK: есть функция округления в свифте round(). Плюс вывод каждого значения можео сделать через цикл for
 //TODO: переделать)
-var num = [10.33, 11.66, 88.99, 221.43]
+//Переделал
+let num = [10.33, 11.66, 88.99, 221.43]
+
+for nums in num {
+    let roundNum = Int(nums.rounded())
+    print(roundNum)
+    print(num[0], num[1], num[2], num[3])
+}
 
 print(String(format: "%.1f", num[0]))
 print(String(format: "%.1f", num[1]))
@@ -29,11 +36,11 @@ print(String(format: "%.1f", num[3]))
 
 var box = [100, 756, 199, 433, 108, 274]
 
-//var average = 0
-//for i in box {
-//    average = average + i
-//}
-//print(Double(resultAverage) / Double(box.count))
+var average = 0
+for i in box {
+    average = average + i
+}
+//print(Double(average) / Double(box.count))
 
 // MARK: с наибольшим и наименьшим согласна, с суммой всех чисел тоже. А остальное как?))))
 var sum = box.reduce(0, +)
@@ -55,19 +62,26 @@ box.count
 // С помощью итерации проверьте входит ли каждое число в интервалы (15;25), (33;42) и (85;99).
 // Выведите результат и числа в консоль
 
-var arr = Array(1...100)
+//Попробовал вот так
+var numbers = Array(1...100)
 
 //MARK: - для того, чтобы перемешать массив можно юзать:
-arr.shuffle()
-
-var arr2: Array<Int> = []
-
+numbers.shuffle()
 
 //MARK: Здесь arr[15...25] - это срез (slice) исходного массива arr, который включает в себя элементы с индексами от 15 до 25. А надо было проверить, входит ли каждое из чисел в отрезки :)
 //TODO: переделать)
-arr2 = Array(arr[15...25])
-arr2 = Array(arr[33...42])
-arr2 = Array(arr[85...99])
+
+for number in numbers {
+    if(number > 15 && number < 25) || (number > 33 && number < 42) || (number > 85 && number < 99) {
+        print("\(number) входит в один из интервалов")
+    } else {
+        print("\(number) не входит в интервалы")
+    }
+}
+
+//arr2 = Array(arr[15...25])
+//arr2 = Array(arr[33...42])
+//arr2 = Array(arr[85...99])
 
 
 // MARK: - Task 4
