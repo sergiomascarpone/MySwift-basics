@@ -87,7 +87,7 @@ print(sum)
 
 ///Сам не смог сделать, нашел вот такие варианты. Разбираюсь и пытаюсь понять что к чему)
 ///Первый вариант
-func findMinMax<T: Comparable>(array: [T]) -> (T,T)? {
+func findMinMax<Z: Comparable>(array: [Z]) -> (Z,Z)? { //как я понял заглавные буквы в этом примере могут быть разные!
     guard let minElement = array.min(), let maxElement = array.max() else {
         return nil
     }
@@ -103,7 +103,7 @@ if let result = findMinMax(array: array7) {
 }
 
 ///Второй вариант
-func findMinMaxCustom<T: Comparable>(array: [T]) -> (T,T)? {
+func findMinMaxCustom<T: Comparable>(array: [T]) -> (T,T)? { //Ну и тут тоже самое по заглавным буквам.
     guard !array.isEmpty else {
         return nil
     }
@@ -349,4 +349,61 @@ print(sum8)
 
 // Формат вывода выберите сами: можно использовать все, что мы прошли к этому моменту.
 
+//Сделал но не без помощи интернета, пока тяжело даются все задачки что ты мне давала, но стараюсь как могу моя хорошая. Еще теорию приходится вспоминать по ходу решения.  Буду и дальше продолжать стараться. И еще раз спасибо что взялась за меня. Сейчас перечитываю всё что ты мне написала перечитать и освежить в голове.
 
+enum MyRoutine {
+    case mon
+    case tue
+    case wen
+    case thu
+    case fri
+    case sat
+    case sun
+    
+    func isCourse() -> Bool {
+        switch self {
+        case .mon, .wen, .sat:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    func isWorkDay() -> Bool {
+        switch self {
+        case .mon, .tue, .wen, .thu, .fri:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    func isWeekend() -> Bool {
+        switch self {
+        case .sat, .sun:
+            return true
+        default:
+            return false
+        }
+    }
+}
+
+let today = MyRoutine.thu
+
+if today.isCourse() {
+    print("идти на курсы")
+} else {
+    print("не идти на курсы")
+}
+
+if today.isWeekend() {
+    print("Выходной день")
+} else {
+    print("не Выходной день")
+}
+
+if today.isWorkDay() {
+    print("Рабочий день")
+} else {
+    print("не Рабочий день")
+}
