@@ -85,8 +85,51 @@ print(sum)
 // 1я - должна искать элементы стандартными средствами.
 // 2я - сами напишите решение для поиска максимального и минимального элемента
 
+///Сам не смог сделать, нашел вот такие варианты. Разбираюсь и пытаюсь понять что к чему)
+///Первый вариант
+func findMinMax<T: Comparable>(array: [T]) -> (T,T)? {
+    guard let minElement = array.min(), let maxElement = array.max() else {
+        return nil
+    }
+    return (minElement, maxElement)
+}
 
+let array7 = [3, 5, 9, 1, 4, 2]
+if let result = findMinMax(array: array7) {
+    let (min, max) = result
+    print("Мин элемент:\(min), Макс элемент\(max)")
+} else {
+    print("Массив пуст")
+}
 
+///Второй вариант
+func findMinMaxCustom<T: Comparable>(array: [T]) -> (T,T)? {
+    guard !array.isEmpty else {
+        return nil
+    }
+    
+    var minValue = array[0]
+    var maxValue = array[0]
+    
+    for value in array {
+        if value < minValue {
+            minValue = value
+        }
+        
+        if value > maxValue {
+            maxValue = value
+        }
+    }
+    return (minValue, maxValue)
+}
+
+let array8 = [12, 44, 88, 3, 5, 90, 54]
+if let result = findMinMaxCustom(array: array8) {
+    let (min, max) = result
+    print("Мин элемент:\(min), Макс элемент\(max)")
+} else {
+    print("Массив пуст")
+}
 
 // 5. Реализуйте функцию, которая принимает массив, а возвращает массив в обратном порядке (не пользуясь стандартными средствами).
 // Реализуйте функцию, которая также принимает последовательность и возвращает массив в обратном порядке (через стандартный метод).
@@ -175,10 +218,10 @@ func isPalindrome(_ word: String) -> String {
         } else {
             return "Слово палиндром"
         }
-        } else {
-            return "Слово не является палиндромом"
-        }
+    } else {
+        return "Слово не является палиндромом"
     }
+}
 
 let word1 = "Жанна"
 let word2 = "Анна"
@@ -264,7 +307,7 @@ print(sum8)
 //    case Fri
 //    case Sat
 //    case Sun
-//    
+//
 //    var dayName: String {
 //        switch self {
 //        case .Mon: return "Mon"
