@@ -194,7 +194,7 @@ print(isPalindrome(word5))
 // А также общее количество символов
 // Для вывода используйет интерполяцию, для реализации бизнес-логики - циклы и оператор switch case.
 
-//Не смог понять почему не достаются знаки препинания
+//Не смог понять почему не достаются знаки препинания((
 
 func textResult(_ text: String) {
     var vowelCount = 0
@@ -234,11 +234,50 @@ text.count
 // Найдите целочисленную сумму всех этих констант (используйте приведение типов к Int)
 // В Вашем решении используйте и optional binding, и forced unwrapping.
 
+let oneStr: String = "4"
+let twoStr: String  = ">"
+let threStr: String  = "M"
+let fourStr: String  = "a"
+let fiveStr: String  = "6"
+let sixStr: String  = "1"
+let sevenStr: String  = "7"
+let eightStr: String  = "9"
+let nineStr: String  = "b"
+let tenStr: String  = "D"
+
+let sum8: Int = Int(oneStr)! + Int(eightStr)! + Int(sevenStr)!
+print(sum8)
+
 
 // MARK: - Enumerations
 // 9. Создайте Enum дни недели, в котором должны храниться связанные значения с названиями для каждого дня.
 // Выведите в консоль названия всех дней недели.
 
+enum Weekday: CaseIterable  {
+    case Mon
+    case Tue
+    case Wed
+    case Thu
+    case Fri
+    case Sat
+    case Sun
+    
+    var dayName: String {
+        switch self {
+        case .Mon: return "Mon"
+        case .Tue: return "Tue"
+        case .Wed: return "Wed"
+        case .Thu: return "Thu"
+        case .Fri: return "Fri"
+        case .Sat: return "Sat"
+        case .Sun: return "Sun"
+        }
+    }
+}
+
+for day in Weekday.allCases {
+    print(day.dayName)
+}
 
 // 10. Реализуйте решение через функции, которые могут принимать день недели в качестве входного аргумента, а также проверят и сообщат ваш рабочий график.
 // А именно:
