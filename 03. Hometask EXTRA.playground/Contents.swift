@@ -86,6 +86,8 @@ print(sum)
 // 2я - сами напишите решение для поиска максимального и минимального элемента
 
 
+
+
 // 5. Реализуйте функцию, которая принимает массив, а возвращает массив в обратном порядке (не пользуясь стандартными средствами).
 // Реализуйте функцию, которая также принимает последовательность и возвращает массив в обратном порядке (через стандартный метод).
 // Чтобы избежать дублирования кода, сделайте так, чтобы 2я функция вызывала 1ю.
@@ -253,31 +255,48 @@ print(sum8)
 // 9. Создайте Enum дни недели, в котором должны храниться связанные значения с названиями для каждого дня.
 // Выведите в консоль названия всех дней недели.
 
-enum Weekday: CaseIterable  {
-    case Mon
-    case Tue
-    case Wed
-    case Thu
-    case Fri
-    case Sat
-    case Sun
-    
-    var dayName: String {
-        switch self {
-        case .Mon: return "Mon"
-        case .Tue: return "Tue"
-        case .Wed: return "Wed"
-        case .Thu: return "Thu"
-        case .Fri: return "Fri"
-        case .Sat: return "Sat"
-        case .Sun: return "Sun"
-        }
-    }
-}
+///Первый способ
+//enum Weekday: CaseIterable  {
+//    case Mon
+//    case Tue
+//    case Wed
+//    case Thu
+//    case Fri
+//    case Sat
+//    case Sun
+//    
+//    var dayName: String {
+//        switch self {
+//        case .Mon: return "Mon"
+//        case .Tue: return "Tue"
+//        case .Wed: return "Wed"
+//        case .Thu: return "Thu"
+//        case .Fri: return "Fri"
+//        case .Sat: return "Sat"
+//        case .Sun: return "Sun"
+//        }
+//    }
+//}
+//
+//for day in Weekday.allCases {
+//    print(day.dayName)
+//}
 
-for day in Weekday.allCases {
-    print(day.dayName)
-}
+///Второй способ, пришлось покапаться в доках, но в этом если разобраться, то он проще и меньше.
+//enum Weekday: CaseIterable  {
+//    case Mon
+//    case Tue
+//    case Wed
+//    case Thu
+//    case Fri
+//    case Sat
+//    case Sun
+//}
+//print(Weekday.allCases.count)
+//
+//let caseList = Weekday.allCases.map({ "\($0)" }).joined(separator: ", ")
+//print(caseList)
+
 
 // 10. Реализуйте решение через функции, которые могут принимать день недели в качестве входного аргумента, а также проверят и сообщат ваш рабочий график.
 // А именно:
