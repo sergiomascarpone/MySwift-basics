@@ -132,13 +132,35 @@ let students: [Student] = [
     Student(name: "Sergey", lastName: "Olegivich", averageScore: 4)
 ]
 
+
 studentsData(_students: [])
+
+
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
 
+//func studentsData(_students: [Student]) {
+//    for (index, student) in students.enumerated() {
+//        let studentNumber = index + 1
+//        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
+//       print("Name \(student.name)")
+//       print("LastNme \(student.lastName)")
+//       print("AverageScore \(student.averageScore)")
 
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
+
+//Сделал вот так, по примеру пред.задач, но хотел попробовать вывести в таком же формате, как и ранее:
+//Srudent№:1. Name: Alesja. LastName: Nikolaevna. AverageScore: 3
+//Srudent№:2. Name: Maksim. LastName: Borisovich. AverageScore: 4
+//Srudent№:3. Name: Egor. LastName: Sergeevich. AverageScore: 5
+//Srudent№:4. Name: Sergey. LastName: Olegivich. AverageScore: 4 но у меня не получилось, я думал притянуть функцию, но у меня ничего не получалось и всё крашилось((
+
+let sortedAverageScore = students.sorted { $1.averageScore < $0.averageScore }
+print("\nSorted by average score:")
+for student in sortedAverageScore {
+    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
+}
 
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
