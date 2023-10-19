@@ -176,7 +176,13 @@ for student in sortedByLastName {
 // Изменится ли первый массив?
 // Распечатайте оба массива.
 
+//С этим я совсем запутался и наверное сделал не так как надо((
+var studentArray = [students]
+print(studentArray)
 
+
+var updatedStudentsArray = [Student(name: "Galina", lastName: "Olegovna", averageScore: 5)]
+print(updatedStudentsArray)
 
 
 // MARK: - Task 3 - Classes
