@@ -165,7 +165,11 @@ for student in sortedAverageScore {
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
 
-let sortedByLastName
+let sortedByLastName = students.sorted { $0.lastName < $1.lastName }
+print("\nSorted by last name:")
+for student in sortedByLastName {
+    print("Student: \(student.name), \(student.lastName)")
+}
 
 // 5. Создайте переменную и присвойте ей ваш существующий массив.
 // Измените в нем данные всех студентов.
