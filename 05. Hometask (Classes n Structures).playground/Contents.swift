@@ -168,7 +168,7 @@ for student in sortedAverageScore {
 let sortedByLastName = students.sorted { $0.lastName < $1.lastName }
 print("\nSorted by last name:")
 for student in sortedByLastName {
-    print("Student: \(student.name), \(student.lastName)")
+    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
 }
 
 // 5. Создайте переменную и присвойте ей ваш существующий массив.
