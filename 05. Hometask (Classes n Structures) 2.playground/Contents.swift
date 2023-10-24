@@ -194,25 +194,23 @@ import UIKit
 // Создайте несколько экземпляров этого класса и заполните их данными.
 // Положите их всех в массив (журнал).
 
-class Students {
+class Student {
     let name: String
     let lastName: String
     let yearOfBirth: Int
     let averageScore: Int
 }
 
-func studentsJournal(_students: [Students]) {
+func studentsJournal(_students: [Student]) {
     for (index, student) in students.enumerated() {
         let studentNumber = index + 1
         print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YerOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
-//        print("Name \(student.name)")
-//        print("LastName \(student.lastName)")
-//        print("YearOfBirth \(student.yearOfBirth)")
-//        print("AverageScore \(student.averageScore)")
+        print("Name \(student.name)")
+        print("LastName \(student.)")
     }
 }
 
-let students: [Students] = [
+let students: [Student] = [
     Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
     Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3),
     Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3),
@@ -220,8 +218,6 @@ let students: [Students] = [
     Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
     Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4),
 ]
-
-studentsJournal(_students: [])
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
