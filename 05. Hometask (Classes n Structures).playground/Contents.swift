@@ -194,8 +194,26 @@ print(updatedStudentsArray)
 // Создайте несколько экземпляров этого класса и заполните их данными.
 // Положите их всех в массив (журнал).
 
+class Student {
+    let name: String
+    let lastName: String
+    let yearOfBirth: Int
+    let averageScore: Int
+}
+
+let students: [Student] = [
+    Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
+    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3),
+    Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3),
+    Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4),
+    Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
+    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4),
+]
+
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
+
+
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
 
