@@ -123,8 +123,8 @@ import UIKit
 ////        print("AverageScore \(student.averageScore)")
 //    }
 //}
-
-
+//
+//
 //let students: [Student] = [
 //    Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
 //    Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
@@ -194,15 +194,22 @@ import UIKit
 // Создайте несколько экземпляров этого класса и заполните их данными.
 // Положите их всех в массив (журнал).
 
-class Students {
+class Student {
     let name: String
     let lastName: String
     let yearOfBirth: Int
-    let averageScore: Int
+    let averageScore: Double
+    
+    init(name: String, lastName: String, yearOfBirth: Int, averageScore: Double) {
+        self.name = name
+        self.lastName = lastName
+        self.yearOfBirth = yearOfBirth
+        self.averageScore = averageScore
+    }
 }
 
-func studentsJournal(_students: [Students]) {
-    for (index, student) in students.enumerated() {
+func studentsData(_students: [Student]) {
+    for (index, student) in student.enumerated() {
         let studentNumber = index + 1
         print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YerOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
 //        print("Name \(student.name)")
@@ -212,16 +219,16 @@ func studentsJournal(_students: [Students]) {
     }
 }
 
-let students: [Students] = [
+let student: [Student] = [
     Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
     Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3),
     Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3),
     Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4),
     Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
-    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4),
+    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4)
 ]
 
-studentsJournal(_students: [])
+studentsData(_students: [])
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
