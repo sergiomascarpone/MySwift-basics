@@ -211,7 +211,7 @@ class Student {
 func studentsData(_students: [Student]) {
     for (index, student) in student.enumerated() {
         let studentNumber = index + 1
-        print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YerOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+        print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
 //        print("Name \(student.name)")
 //        print("LastName \(student.lastName)")
 //        print("YearOfBirth \(student.yearOfBirth)")
@@ -221,11 +221,11 @@ func studentsData(_students: [Student]) {
 
 let student: [Student] = [
     Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
-    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3),
-    Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3),
-    Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4),
+    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3.7),
+    Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3.9),
+    Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4.4),
     Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
-    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4)
+    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4.7)
 ]
 
 studentsData(_students: [])
@@ -236,11 +236,17 @@ studentsData(_students: [])
 //func studentsJournal(_students: [Student]) {
 //    for (index, student) in students.enumerated() {
 //        let studentNumber = index + 1
-//        print("Student№:\(studentNumber). Name: \(student.name), LastName: \(student.lastName), YerOfBirth: \(student.yearOfBirth), AverageScore: \(student.averageScore)")
+//        print("Student№:\(studentNumber). Name: \(student.name), LastName: \(student.lastName), YearOfBirth: \(student.yearOfBirth), AverageScore: \(student.averageScore)")
 //    }
 //}
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
+
+let sortedAverageScore = student.sorted { $1.averageScore < $0.averageScore }
+print("\nSorted by average score:")
+for student in sortedAverageScore {
+    print("Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+}
 
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
