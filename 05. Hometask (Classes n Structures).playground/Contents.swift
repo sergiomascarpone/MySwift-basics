@@ -294,11 +294,12 @@ for Student in sortedPeople {
 //print(updatedStudentsArray)
 
 // MARK: - Почему по итогу массивы из заданий 2 и 3 менялись / не менялись? Чем это обусловлено?
-// Это 5 задание которое я не смог правильно сделать, но если логически подумать, то данные массива должны будут изменится, так как мы присваиваем массив, после чего меняем значения.
+// Это 5 задание которое я не смог правильно сделать, но если логически подумать, то данные массива должны будут изменится в классе так как класс это ссылочный тип, и остаться неизменным в структуре, так как это значимый тип.
 
 
 // MARK: - Резюмируйте, чем отличаются классы от структур и когда что лучше использовать?
-
+// Структуры это значимый тип, а классы ссылочный тип. Если по документации, то по умолчанию лучше структуры. Нам проще анализировать свой код, так как структура не может быть изменена другой частью кода.
+// С помощью класса, мы можем четко опредеоить родительско-дочернюю связь между классом и подклассом.
 
 
 // MARK: - Task 4 - Properties
@@ -307,7 +308,43 @@ for Student in sortedPeople {
 // 2 — вычисляющее, сколько всего лет он учился (студент учился в школе с 6 лет, если ему меньше 6 лет — возвращать 0)
 
 
+struct Birthday {
+    var day: Int
+    var month: Int
+    var year: Int
+}
 
+struct Student {
+    var firstName: String
+    var lastName: String
+    var birthday: Birthday
+    
+    var age: Int { // age - вычисляет возраст студента на текущую дату. Мы используем текущую дату (Date()) и текущий год (calendar.component(.year, from: currentDate)) для вычисления возраста.
+        let currentData = Date()
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: currentData)
+        
+        let age = currentYear - birthday.year
+        
+        if calendar.component(.month, from: currentData) < birthday.month || (calendar.component(.month, from: currentData) == birthday.month && calendar.component(.day, from: currentData) < birthday.day) {
+            return age - 1
+        } else {
+            return age
+        }
+    }
+    
+    var yearsOfStudy: Int { //yearsOfStudy - вычисляет количество лет обучения студента.
+        if age < 6 {
+            return 0
+        } else {
+            return age - 6
+        }
+    }
+}
+
+let student = Student(firstName: "Oleg", lastName: "Tinkov", birthday: Birthday(day: 12, month: 4, year: 1989))
+print("Age: \(student.age)")
+print("Years of study: \(student.yearsOfStudy)")
 
 // MARK: - Task 5 - Properties
 // 1. Создайте класс Человек, который будет содержать имя, фамилию, возраст, рост и вес.
