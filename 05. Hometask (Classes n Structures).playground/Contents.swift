@@ -251,19 +251,50 @@ for student in sortedAverageScore {
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
 
-let sortedlastName = student.sorted { $0.lastName < $1.lastName }
-print("nSorted by Last Name:")
-for student in sortedlastName {
-    print("Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+// подглядел в интернете
+let sortedPeople = student.sorted { (Student1, Student2) -> Bool in
+    if Student1.lastName == Student2.lastName {
+        return Student1.name < Student2.name
+    } else {
+        return Student1.lastName < Student2.lastName
+    }
 }
+print("\nSorted by last name, name:")
+for Student in sortedPeople {
+    print("Name: \(Student.name). LastName:\(Student.lastName). YearOfBirth: \(Student.yearOfBirth). AverageScore: \(Student.averageScore)")
+}
+
+//let sortedlastName = student.sorted { $0.lastName < $1.lastName }
+//print("nSorted by Last Name:")
+//for student in sortedlastName {
+//    print("Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+//}
 
 // 5. Создайте переменную и присвойте ей ваш существующий массив.
 // Измените в нем данные всех студентов.
 // Изменится ли первый массив?
 
+// Я честно не смог разобраться с этим заданием(
+// остальные задания №2 и №3 дались легко, пример был перед глазами, без подсказок пока тяжело самому вот так вот сесть и написать\решить поставленную задачу. Но может быть что там у нас константа, а она неизменяемая, а в задании 5 переменная, будет 2 массива
 
+//var studentArray = [student]
+//print(studentArray)
+//
+//
+//var updatedStudentsArray: [Student] = [
+//    Student(name: "Oleg", lastName: "Dolgix", yearOfBirth: 23, averageScore: 3.9),
+//    Student(name: "Stas", lastName: "Aleshko", yearOfBirth: 24, averageScore: 3.3),
+//    Student(name: "Alina", lastName: "Birukov", yearOfBirth: 22, averageScore: 4.0),
+//    Student(name: "Svetlana", lastName: "Olegovna", yearOfBirth: 21, averageScore: 4.4),
+//    Student(name: "Viktoria", lastName: "Aleksandrovna", yearOfBirth: 23, averageScore: 5.0),
+//    Student(name: "Sergey", lastName: "Olegovich", yearOfBirth: 22, averageScore: 4.9),
+//    Student(name: "Aleksandra", lastName: "Sergeevna", yearOfBirth: 24, averageScore: 4.7)]
+//
+//
+//print(updatedStudentsArray)
 
 // MARK: - Почему по итогу массивы из заданий 2 и 3 менялись / не менялись? Чем это обусловлено?
+// Это 5 задание которое я не смог правильно сделать, но если логически подумать, то данные массива должны будут изменится, так как мы присваиваем массив, после чего меняем значения.
 
 
 // MARK: - Резюмируйте, чем отличаются классы от структур и когда что лучше использовать?
