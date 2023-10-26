@@ -355,40 +355,40 @@ for Student in sortedPeople {
 // - создайте свойство, которое будет содержать количество созданных объектов этого класса
 // Вот тут немного нужно самому разобраться, а то я совсем не так понял, как и что тут работает прям досконально)))
 
-class Person {
-    
-    static var count = 0
-    
-    static let minAge = 0
-    static let maxAge = 100
-    
-    static let minNameLenght = 2
-    static let maxNameLenght = 50
-    
-    static let minGrowth = 0
-    static let minWeight = 0
-    
-    let name: String
-    let lastName: String
-    let age: Int
-    let growth: Int
-    let weight: Int
-    
-    init(name: String, lastName: String, age: Int, growth: Int, weight: Int) {
-        self.name = name
-        self.lastName = lastName
-        self.age = age
-        self.growth = growth
-        self.weight = weight
-        
-        Person.count += 1
-    }
-}
-
-let person1 = Person(name: "Vadim", lastName: "Oleynikov", age: 22, growth: 187, weight: 90)
-let person2 = Person(name: "Dmitriy", lastName: "Gurmen", age: 34, growth: 187, weight: 87)
-
-print("Count: \(Person.count)")
+//class Person {
+//    
+//    static var count = 0
+//    
+//    static let minAge = 0
+//    static let maxAge = 100
+//    
+//    static let minNameLenght = 2
+//    static let maxNameLenght = 50
+//    
+//    static let minGrowth = 0
+//    static let minWeight = 0
+//    
+//    let name: String
+//    let lastName: String
+//    let age: Int
+//    let growth: Int
+//    let weight: Int
+//    
+//    init(name: String, lastName: String, age: Int, growth: Int, weight: Int) {
+//        self.name = name
+//        self.lastName = lastName
+//        self.age = age
+//        self.growth = growth
+//        self.weight = weight
+//        
+//        Person.count += 1
+//    }
+//}
+//
+//let person1 = Person(name: "Vadim", lastName: "Oleynikov", age: 22, growth: 187, weight: 90)
+//let person2 = Person(name: "Dmitriy", lastName: "Gurmen", age: 34, growth: 187, weight: 87)
+//
+//print("Count: \(Person.count)")
 
 
 
@@ -409,10 +409,11 @@ class Cat {
     
     private let voice: ()
     
-    init(name: String, age: Int) {
-        
+    init(name: String, age: Int, size: String, voice: ()) {
         self.name = name
         self.age = age
+        self.size = size
+        self.voice = voice
     }
 }
 
@@ -423,8 +424,6 @@ class RedCat: Cat {
 class BlackCat: Cat {
     
 }
-
-
 
 
 // MARK: - Task 7 - Overriding
