@@ -401,6 +401,28 @@ print("Count: \(Person.count)")
 // 6. Реализуйте свойство имя кота, доступное только для чтения, и дайте имя каждому котику
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
+class Cat {
+    
+    let name: String
+    let age: Int
+    let size: String
+    
+    private let voice: ()
+    
+    init(name: String, age: Int) {
+        
+        self.name = name
+        self.age = age
+    }
+}
+
+class RedCat: Cat {
+    
+}
+
+class BlackCat: Cat {
+    
+}
 
 
 
