@@ -195,41 +195,41 @@ import UIKit
 // Создайте несколько экземпляров этого класса и заполните их данными.
 // Положите их всех в массив (журнал).
 
-class Student {
-    let name: String
-    let lastName: String
-    let yearOfBirth: Int
-    let averageScore: Double
-    
-    init(name: String, lastName: String, yearOfBirth: Int, averageScore: Double) {
-        self.name = name
-        self.lastName = lastName
-        self.yearOfBirth = yearOfBirth
-        self.averageScore = averageScore
-    }
-}
-
-func studentsData(_students: [Student]) {
-    for (index, student) in student.enumerated() {
-        let studentNumber = index + 1
-        print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
-//        print("Name \(student.name)")
-//        print("LastName \(student.lastName)")
-//        print("YearOfBirth \(student.yearOfBirth)")
-//        print("AverageScore \(student.averageScore)")
-    }
-}
-
-let student: [Student] = [
-    Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
-    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3.7),
-    Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3.9),
-    Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4.4),
-    Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
-    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4.7)
-]
-
-studentsData(_students: [])
+//class Student {
+//    let name: String
+//    let lastName: String
+//    let yearOfBirth: Int
+//    let averageScore: Double
+//    
+//    init(name: String, lastName: String, yearOfBirth: Int, averageScore: Double) {
+//        self.name = name
+//        self.lastName = lastName
+//        self.yearOfBirth = yearOfBirth
+//        self.averageScore = averageScore
+//    }
+//}
+//
+//func studentsData(_students: [Student]) {
+//    for (index, student) in student.enumerated() {
+//        let studentNumber = index + 1
+//        print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+////        print("Name \(student.name)")
+////        print("LastName \(student.lastName)")
+////        print("YearOfBirth \(student.yearOfBirth)")
+////        print("AverageScore \(student.averageScore)")
+//    }
+//}
+//
+//let student: [Student] = [
+//    Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
+//    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3.7),
+//    Student(name: "Anton", lastName: "Kereev", yearOfBirth: 24, averageScore: 3.9),
+//    Student(name: "Vasilij", lastName: "Nikitin", yearOfBirth: 30, averageScore: 4.4),
+//    Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
+//    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4.7)
+//]
+//
+//studentsData(_students: [])
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
@@ -243,27 +243,27 @@ studentsData(_students: [])
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
 
-let sortedAverageScore = student.sorted { $1.averageScore < $0.averageScore }
-print("\nSorted by average score:")
-for student in sortedAverageScore {
-    print("Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
-}
+//let sortedAverageScore = student.sorted { $1.averageScore < $0.averageScore }
+//print("\nSorted by average score:")
+//for student in sortedAverageScore {
+//    print("Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
+//}
 
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
 
 // подглядел в интернете
-let sortedPeople = student.sorted { (Student1, Student2) -> Bool in
-    if Student1.lastName == Student2.lastName {
-        return Student1.name < Student2.name
-    } else {
-        return Student1.lastName < Student2.lastName
-    }
-}
-print("\nSorted by last name, name:")
-for Student in sortedPeople {
-    print("Name: \(Student.name). LastName:\(Student.lastName). YearOfBirth: \(Student.yearOfBirth). AverageScore: \(Student.averageScore)")
-}
+//let sortedPeople = student.sorted { (Student1, Student2) -> Bool in
+//    if Student1.lastName == Student2.lastName {
+//        return Student1.name < Student2.name
+//    } else {
+//        return Student1.lastName < Student2.lastName
+//    }
+//}
+//print("\nSorted by last name, name:")
+//for Student in sortedPeople {
+//    print("Name: \(Student.name). LastName:\(Student.lastName). YearOfBirth: \(Student.yearOfBirth). AverageScore: \(Student.averageScore)")
+//}
 
 //let sortedlastName = student.sorted { $0.lastName < $1.lastName }
 //print("nSorted by Last Name:")
@@ -418,17 +418,34 @@ class Cat {
         self.color = color
     }
     
-    func
+    
+    func makeSound() {
+        if let voice = voice {
+            print("\(name) says \(voice)")
+        } else {
+            print("\(name) is silent")
+        }
+    }
 }
 
-class RedCat: Cat {
-    var name = "Tom"
+
+class OrangeCat: Cat {
     
+    init(name: String, color: String, size: String, gender: String) {
+        super.init(name: name, color: "Orange", size: size, gender: gender)
+    }
 }
+
 
 class BlackCat: Cat {
-    var name = "Olivia"
+    
+    init(name: String, color: String, size: String, gender: String) {
+        super.init(name: name, color: "Black", size: size, gender: gender)
+    }
 }
+
+
+   
 
 
 // MARK: - Task 7 - Overriding
