@@ -404,18 +404,21 @@ for Student in sortedPeople {
 
 class Cat {
     
-    let name: String
-    let age: Int
-    let size: String
+    var name: String
+    var color: String
+    var gender: String
+    var size: String
     
-    private let voice: ()
+    private var voice: String?
     
-    init(name: String, age: Int, size: String, voice: ()) {
+    init(name: String, color: String, size: String, gender: String) {
         self.name = name
-        self.age = age
+        self.gender = gender
         self.size = size
-        self.voice = voice
+        self.color = color
     }
+    
+    func
 }
 
 class RedCat: Cat {
