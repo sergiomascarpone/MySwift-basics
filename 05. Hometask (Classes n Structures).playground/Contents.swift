@@ -26,6 +26,7 @@ import UIKit
 
 //тут попробовал поискать еще в интернете варианты, только вот осталось с ними разобраться и вникнуть. чтобы в любой момент мог написать не подглядывая)))
 
+
 //class Car {
 //    let brand: String
 //    let model: String
@@ -418,11 +419,12 @@ class Cat {
 }
 
 class RedCat: Cat {
+    var name = "Tom"
     
 }
 
 class BlackCat: Cat {
-    
+    var name = "Olivia"
 }
 
 
