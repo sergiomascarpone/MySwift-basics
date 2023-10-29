@@ -403,13 +403,14 @@ import UIKit
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
 class Cat {
-    
+    private var voice: String?
+
     var name: String
     var color: String
     var gender: String
     var size: String
     
-    private var voice: String?
+  
     
     init(name: String, color: String, size: String, gender: String) {
         self.name = name
@@ -444,8 +445,14 @@ class BlackCat: Cat {
     }
 }
 
+let garfield = OrangeCat(name: "Garfield", size: "large", gender: "male")
+print(garfield.name)
+garfield.makeSound()
 
-   
+
+let olivia = BlackCat(name: "Olivia", size: "mediun", gender: "male")
+print(olivia.name)
+olivia.makeSound()
 
 
 // MARK: - Task 7 - Overriding
