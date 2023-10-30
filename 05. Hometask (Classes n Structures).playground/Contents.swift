@@ -402,7 +402,7 @@ import UIKit
 // 6. Реализуйте свойство имя кота, доступное только для чтения, и дайте имя каждому котику
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
-//Пока не работает и я не могу понять почему((((
+//Пока не работает и я не могу понять почему(((( Оказывается дело было в том. что аргумент «пол» должен предшествовать аргументу «размер», а у меня было по другому)) тут и смог разобраться.
 class Cat {
     private var voice: String?
     var name: String
@@ -431,27 +431,28 @@ class Cat {
 
 class OrangeCat: Cat {
     
-    init(name: String, size: String, gender: String) {
-        super.init(name: name, color: "Orange", gender: gender, size: size)    }
+    init(name: String, gender: String, size: String) {
+        super.init(name: name, color: "Orange", gender: gender, size: size)
+    }
 }
 
 
 class BlackCat: Cat {
     
-    override init(name: String, color: String, gender: String, size: String) {
+    init(name: String, gender: String, size: String) {
         super.init(name: name, color: "Black", gender: gender, size: size)
     }
 }
 
 
-let garfield = OrangeCat(name: "Garfield", size: "large", gender: "male")
-print(garfield.name)
-garfield.makeSound()
+let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
+print(garfieldCat.name)
+garfieldCat.makeSound()
 
 
-let olivia = BlackCat(name: "Olivia", size: "mediun", gender: "female")
-print(olivia.name)
-olivia.makeSound()
+let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
+print(oliviaCat.name)
+oliviaCat.makeSound()
 
 
 // MARK: - Task 7 - Overriding
