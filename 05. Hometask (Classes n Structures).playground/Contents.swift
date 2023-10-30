@@ -403,57 +403,55 @@ import UIKit
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
 //Пока не работает и я не могу понять почему((((
-//class Cat {
-//    private var voice: String?
-//
-//    var name: String
-//    var color: String
-//    var gender: String
-//    var size: String
-//    
-//    
-//    init(name: String, color: String, size: String, gender: String) {
-//        self.name = name
-//        self.gender = gender
-//        self.size = size
-//        self.color = color
-//    }
-//    
-//    
-//    func makeSound() {
-//        if let voice = voice {
-//            print("\(name) says \(voice)")
-//        } else {
-//            print("\(name) is silent")
-//        }
-//    }
-//}
-//
-//
-//class OrangeCat: Cat {
-//    
-//    init(name: String, color: String, size: String, gender: String) {
-//        super.init(name: name, color: "Orange", size: size, gender: gender)
-//    }
-//}
-//
-//
-//class BlackCat: Cat {
-//    
-//    init(name: String, color: String, size: String, gender: String) {
-//        super.init(name: name, color: "Black", size: size, gender: gender)
-//    }
-//}
-//
-//
-//let garfield = OrangeCat(name: "Garfield", size: "large", gender: "male")
-//print(garfield.name)
-//garfield.makeSound()
-//
-//
-//let olivia = BlackCat(name: "Olivia", size: "mediun", gender: "female")
-//print(olivia.name)
-//olivia.makeSound()
+class Cat {
+    private var voice: String?
+    var name: String
+    
+    var color: String
+    var gender: String
+    var size: String
+    
+    init(name: String, color: String, gender: String, size: String) {
+       
+        self.name = name
+        self.color = color
+        self.gender = gender
+        self.size = size
+    }
+    
+    func makeSound() {
+        if let voice = voice {
+            print("\(name) says \(voice)")
+        } else {
+            print("\(name) is silent")
+        }
+    }
+}
+
+
+class OrangeCat: Cat {
+    
+    init(name: String, size: String, gender: String) {
+        super.init(name: name, color: "Orange", gender: gender, size: size)    }
+}
+
+
+class BlackCat: Cat {
+    
+    override init(name: String, color: String, gender: String, size: String) {
+        super.init(name: name, color: "Black", gender: gender, size: size)
+    }
+}
+
+
+let garfield = OrangeCat(name: "Garfield", size: "large", gender: "male")
+print(garfield.name)
+garfield.makeSound()
+
+
+let olivia = BlackCat(name: "Olivia", size: "mediun", gender: "female")
+print(olivia.name)
+olivia.makeSound()
 
 
 // MARK: - Task 7 - Overriding
