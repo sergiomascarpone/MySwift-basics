@@ -483,6 +483,10 @@ class Triangle: GeometricFigure {
     
 }
 
+class Trapezoid: GeometricFigure {
+    
+}
+
 
 
 // MARK: - Task 8 - Extensions
