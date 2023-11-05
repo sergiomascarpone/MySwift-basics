@@ -467,10 +467,17 @@ oliviaCat.makeSound()
 // 8. Если фигуры - Круг, Треугольник или Ромб - задайте им красный цвет
 // 9. Если фигуры - Квадрат или Трапеция - задайте им зеленый цвет
 
-class FeometricFigure {
+class GeometricFigure {
     
 }
 
+class Circle: GeometricFigure {
+    
+}
+
+class Square: GeometricFigure {
+    
+}
 
 
 
