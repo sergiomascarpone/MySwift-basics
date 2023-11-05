@@ -479,6 +479,10 @@ class Square: GeometricFigure {
     
 }
 
+class Triangle: GeometricFigure {
+    
+}
+
 
 
 // MARK: - Task 8 - Extensions
