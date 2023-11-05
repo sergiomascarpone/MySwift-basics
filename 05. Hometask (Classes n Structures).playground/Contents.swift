@@ -487,7 +487,9 @@ class Trapezoid: GeometricFigure {
     
 }
 
-
+class Rhombus: GeometricFigure {
+    
+}
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
