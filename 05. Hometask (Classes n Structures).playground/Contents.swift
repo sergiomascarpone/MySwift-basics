@@ -556,6 +556,13 @@ class Rhombus: GeometricFigure {
     }
 }
 
+let circle = Circle()
+circle.calculateArea()
+print("Описание: \(circle.description)")
+print("Цвет: \(circle.color)")
+
+
+
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
 // 2. Добавьте свойство, которое возвращает количество символов в числе
