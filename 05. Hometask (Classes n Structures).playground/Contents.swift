@@ -494,7 +494,18 @@ class Circle: GeometricFigure {
 
 
 class Square: GeometricFigure {
+    override func calculateArea() {
+        super.calculateArea()
+        print("Расчёт площади квадрата")
+    }
     
+    override var description: String {
+        return "Это квадрат"
+    }
+    
+    override var color: String {
+        return "Зелёный"
+    }
 }
 
 
