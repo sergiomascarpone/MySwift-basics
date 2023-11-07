@@ -542,7 +542,18 @@ class Trapezoid: GeometricFigure {
 
 
 class Rhombus: GeometricFigure {
+    override func calculateArea() {
+        super.calculateArea()
+        print("Расчёт площади ромба")
+    }
     
+    override var description: String {
+        return "Это ромб"
+    }
+    
+    override var color: String {
+        return "Красный"
+    }
 }
 
 // MARK: - Task 8 - Extensions
