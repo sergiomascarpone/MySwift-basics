@@ -468,7 +468,12 @@ oliviaCat.makeSound()
 // 9. Если фигуры - Квадрат или Трапеция - задайте им зеленый цвет
 
 class GeometricFigure {
+    var description = ""
+    var color = ""
     
+    func calculateArea() {
+        print("Метод подсчёта площади фигуры")
+    }
 }
 
 
