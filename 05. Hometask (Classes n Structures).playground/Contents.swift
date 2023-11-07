@@ -561,7 +561,10 @@ circle.calculateArea()
 print("Описание: \(circle.description)")
 print("Цвет: \(circle.color)")
 
-
+let square = Square()
+square.calculateArea()
+print("Описание: \(square.description)")
+print("Цвет: \(square.color)")
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
