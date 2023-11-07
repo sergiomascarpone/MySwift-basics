@@ -510,7 +510,18 @@ class Square: GeometricFigure {
 
 
 class Triangle: GeometricFigure {
+    override func calculateArea() {
+        super.calculateArea()
+        print("Расчёт площади треугольника")
+    }
     
+    override var description: String {
+        return "Это треугольник"
+    }
+    
+    override var color: String {
+        return "Красный"
+    }
 }
 
 
