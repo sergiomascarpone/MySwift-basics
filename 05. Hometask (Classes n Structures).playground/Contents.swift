@@ -526,7 +526,18 @@ class Triangle: GeometricFigure {
 
 
 class Trapezoid: GeometricFigure {
+    override func calculateArea() {
+        super.calculateArea()
+        print("Расчёт площади трапеции")
+    }
     
+    override var description: String {
+        return "Это трапеция"
+    }
+    
+    override var color: String {
+        return "Зелёный"
+    }
 }
 
 
