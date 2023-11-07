@@ -471,21 +471,26 @@ class GeometricFigure {
     
 }
 
+
 class Circle: GeometricFigure {
     
 }
+
 
 class Square: GeometricFigure {
     
 }
 
+
 class Triangle: GeometricFigure {
     
 }
 
+
 class Trapezoid: GeometricFigure {
     
 }
+
 
 class Rhombus: GeometricFigure {
     
