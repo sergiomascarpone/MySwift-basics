@@ -478,7 +478,18 @@ class GeometricFigure {
 
 
 class Circle: GeometricFigure {
+    override func calculateArea() {
+        super.calculateArea()
+        print("Расчёт площади круга")
+    }
     
+    override var description: String {
+        return "Это круг"
+    }
+    
+    override var color: String {
+        return "Красный"
+    }
 }
 
 
