@@ -566,6 +566,12 @@ square.calculateArea()
 print("Описание: \(square.description)")
 print("Цвет: \(square.color)")
 
+let triangle = Triangle()
+triangle.calculateArea()
+print("Описание: \(triangle.description)")
+print("Цвет: \(triangle.color)")
+
+
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
 // 2. Добавьте свойство, которое возвращает количество символов в числе
