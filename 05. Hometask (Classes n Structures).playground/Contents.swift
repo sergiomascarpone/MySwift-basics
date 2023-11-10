@@ -576,6 +576,10 @@ trapezoid.calculateArea()
 print(": \(trapezoid.description)")
 print(": \(trapezoid.color)")
 
+let rhombus = Rhombus()
+rhombus.calculateArea()
+print(": \(rhombus.description)")
+print(": \(rhombus.color)")
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
