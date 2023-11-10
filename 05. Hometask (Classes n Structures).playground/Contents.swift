@@ -571,6 +571,11 @@ triangle.calculateArea()
 print("Описание: \(triangle.description)")
 print("Цвет: \(triangle.color)")
 
+let trapezoid = Trapezoid()
+trapezoid.calculateArea()
+print(": \(trapezoid.description)")
+print(": \(trapezoid.color)")
+
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
