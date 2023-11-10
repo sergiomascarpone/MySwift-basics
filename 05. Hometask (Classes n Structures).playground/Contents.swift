@@ -404,57 +404,57 @@ import UIKit
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
 //Пока не работает и я не могу понять почему(((( Оказывается дело было в том. что аргумент «пол» должен предшествовать аргументу «размер», а у меня было по другому)) тут и смог разобраться.
-class Cat {
-    private var voice: String?
-    var name: String
-    
-    var color: String
-    var gender: String
-    var size: String
-    
-    init(name: String, color: String, gender: String, size: String) {
-       
-        self.name = name
-        self.color = color
-        self.gender = gender
-        self.size = size
-    }
-    
-    func makeSound() {
-        if let voice = voice {
-            print("\(name) says \(voice)")
-        } else {
-            print("\(name) is silent")
-        }
-    }
-}
-
-
-class OrangeCat: Cat {
-    
-    init(name: String, gender: String, size: String) {
-        super.init(name: name, color: "Orange", gender: gender, size: size)
-    }
-}
-
-
-class BlackCat: Cat {
-    
-    init(name: String, gender: String, size: String) {
-        super.init(name: name, color: "Black", gender: gender, size: size)
-    }
-}
-
-
-let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
-print(garfieldCat.name)
-garfieldCat.makeSound()
-
-
-let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
-print(oliviaCat.name)
-oliviaCat.makeSound()
-
+//class Cat {
+//    private var voice: String?
+//    var name: String
+//    
+//    var color: String
+//    var gender: String
+//    var size: String
+//    
+//    init(name: String, color: String, gender: String, size: String) {
+//       
+//        self.name = name
+//        self.color = color
+//        self.gender = gender
+//        self.size = size
+//    }
+//    
+//    func makeSound() {
+//        if let voice = voice {
+//            print("\(name) says \(voice)")
+//        } else {
+//            print("\(name) is silent")
+//        }
+//    }
+//}
+//
+//
+//class OrangeCat: Cat {
+//    
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Orange", gender: gender, size: size)
+//    }
+//}
+//
+//
+//class BlackCat: Cat {
+//    
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Black", gender: gender, size: size)
+//    }
+//}
+//
+//
+//let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
+//print(garfieldCat.name)
+//garfieldCat.makeSound()
+//
+//
+//let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
+//print(oliviaCat.name)
+//oliviaCat.makeSound()
+//
 
 // MARK: - Task 7 - Overriding
 // 1. Создайте класс Геометрическая фигура и реализуйте в нем метод подсчета площади фигуры
@@ -573,13 +573,13 @@ print("Цвет: \(triangle.color)")
 
 let trapezoid = Trapezoid()
 trapezoid.calculateArea()
-print(": \(trapezoid.description)")
-print(": \(trapezoid.color)")
+print("Описание: \(trapezoid.description)")
+print("Цвет: \(trapezoid.color)")
 
 let rhombus = Rhombus()
 rhombus.calculateArea()
-print(": \(rhombus.description)")
-print(": \(rhombus.color)")
+print("Описание: \(rhombus.description)")
+print("Цвет: \(rhombus.color)")
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
