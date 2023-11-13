@@ -592,7 +592,37 @@ print("Цвет: \(rhombus.color)")
 // 4. Добавьте типу String метод truncate(length: Int), который определит, что строка длиннее, чем length
 // А затем отсечет лишние символы и заменит их на "..."
 
+extension Int {
+    var isNegative: Bool {
+        return self < 0
+    }
+    
+    var isPositive: Bool {
+        return self > 0
+    }
+    
+    var characterCount: Int {
+        return Stride(self).count
+    }
+}
 
+extension String {
+    func trimText(lenght: Int) -> String {
+        guard lenght <= self.count else {
+            return self
+        }
+        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
+        return String(self[..<endIndex])
+    }
+    
+    func truncate(lenght: Int) -> String {
+        guard self.count > lenght else {
+            return self
+        }
+        let endIndex = self.index(self.startIndex, offsetBy: lenght)
+        return self[..<endIndex] + "..."
+    }
+}
 
 
 
