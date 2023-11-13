@@ -624,7 +624,14 @@ extension String {
     }
 }
 
+let number = 12345
+print(number.isPositive)
+print(number.isNegative)
+print(number.characterCount)
 
+let text = "Hello, world!"
+print(text.trimText(length: 5))
+print(text.truncate(length: 10))
 
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
