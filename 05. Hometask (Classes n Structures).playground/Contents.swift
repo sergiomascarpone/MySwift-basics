@@ -556,6 +556,7 @@ class Rhombus: GeometricFigure {
     }
 }
 
+
 let circle = Circle()
 circle.calculateArea()
 print("Описание: \(circle.description)")
@@ -580,6 +581,7 @@ let rhombus = Rhombus()
 rhombus.calculateArea()
 print("Описание: \(rhombus.description)")
 print("Цвет: \(rhombus.color)")
+
 
 // MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
