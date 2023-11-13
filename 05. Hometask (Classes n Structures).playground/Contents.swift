@@ -467,120 +467,120 @@ import UIKit
 // 8. Если фигуры - Круг, Треугольник или Ромб - задайте им красный цвет
 // 9. Если фигуры - Квадрат или Трапеция - задайте им зеленый цвет
 
-class GeometricFigure {
-    var description = ""
-    var color = ""
-    
-    func calculateArea() {
-        print("Метод подсчёта площади фигуры")
-    }
-}
-
-
-class Circle: GeometricFigure {
-    override func calculateArea() {
-        super.calculateArea()
-        print("Расчёт площади круга")
-    }
-    
-    override var description: String {
-        return "Это круг"
-    }
-    
-    override var color: String {
-        return "Красный"
-    }
-}
-
-
-class Square: GeometricFigure {
-    override func calculateArea() {
-        super.calculateArea()
-        print("Расчёт площади квадрата")
-    }
-    
-    override var description: String {
-        return "Это квадрат"
-    }
-    
-    override var color: String {
-        return "Зелёный"
-    }
-}
-
-
-class Triangle: GeometricFigure {
-    override func calculateArea() {
-        super.calculateArea()
-        print("Расчёт площади треугольника")
-    }
-    
-    override var description: String {
-        return "Это треугольник"
-    }
-    
-    override var color: String {
-        return "Красный"
-    }
-}
-
-
-class Trapezoid: GeometricFigure {
-    override func calculateArea() {
-        super.calculateArea()
-        print("Расчёт площади трапеции")
-    }
-    
-    override var description: String {
-        return "Это трапеция"
-    }
-    
-    override var color: String {
-        return "Зелёный"
-    }
-}
-
-
-class Rhombus: GeometricFigure {
-    override func calculateArea() {
-        super.calculateArea()
-        print("Расчёт площади ромба")
-    }
-    
-    override var description: String {
-        return "Это ромб"
-    }
-    
-    override var color: String {
-        return "Красный"
-    }
-}
-
-
-let circle = Circle()
-circle.calculateArea()
-print("Описание: \(circle.description)")
-print("Цвет: \(circle.color)")
-
-let square = Square()
-square.calculateArea()
-print("Описание: \(square.description)")
-print("Цвет: \(square.color)")
-
-let triangle = Triangle()
-triangle.calculateArea()
-print("Описание: \(triangle.description)")
-print("Цвет: \(triangle.color)")
-
-let trapezoid = Trapezoid()
-trapezoid.calculateArea()
-print("Описание: \(trapezoid.description)")
-print("Цвет: \(trapezoid.color)")
-
-let rhombus = Rhombus()
-rhombus.calculateArea()
-print("Описание: \(rhombus.description)")
-print("Цвет: \(rhombus.color)")
+//class GeometricFigure {
+//    var description = ""
+//    var color = ""
+//    
+//    func calculateArea() {
+//        print("Метод подсчёта площади фигуры")
+//    }
+//}
+//
+//
+//class Circle: GeometricFigure {
+//    override func calculateArea() {
+//        super.calculateArea()
+//        print("Расчёт площади круга")
+//    }
+//    
+//    override var description: String {
+//        return "Это круг"
+//    }
+//    
+//    override var color: String {
+//        return "Красный"
+//    }
+//}
+//
+//
+//class Square: GeometricFigure {
+//    override func calculateArea() {
+//        super.calculateArea()
+//        print("Расчёт площади квадрата")
+//    }
+//    
+//    override var description: String {
+//        return "Это квадрат"
+//    }
+//    
+//    override var color: String {
+//        return "Зелёный"
+//    }
+//}
+//
+//
+//class Triangle: GeometricFigure {
+//    override func calculateArea() {
+//        super.calculateArea()
+//        print("Расчёт площади треугольника")
+//    }
+//    
+//    override var description: String {
+//        return "Это треугольник"
+//    }
+//    
+//    override var color: String {
+//        return "Красный"
+//    }
+//}
+//
+//
+//class Trapezoid: GeometricFigure {
+//    override func calculateArea() {
+//        super.calculateArea()
+//        print("Расчёт площади трапеции")
+//    }
+//    
+//    override var description: String {
+//        return "Это трапеция"
+//    }
+//    
+//    override var color: String {
+//        return "Зелёный"
+//    }
+//}
+//
+//
+//class Rhombus: GeometricFigure {
+//    override func calculateArea() {
+//        super.calculateArea()
+//        print("Расчёт площади ромба")
+//    }
+//    
+//    override var description: String {
+//        return "Это ромб"
+//    }
+//    
+//    override var color: String {
+//        return "Красный"
+//    }
+//}
+//
+//
+//let circle = Circle()
+//circle.calculateArea()
+//print("Описание: \(circle.description)")
+//print("Цвет: \(circle.color)")
+//
+//let square = Square()
+//square.calculateArea()
+//print("Описание: \(square.description)")
+//print("Цвет: \(square.color)")
+//
+//let triangle = Triangle()
+//triangle.calculateArea()
+//print("Описание: \(triangle.description)")
+//print("Цвет: \(triangle.color)")
+//
+//let trapezoid = Trapezoid()
+//trapezoid.calculateArea()
+//print("Описание: \(trapezoid.description)")
+//print("Цвет: \(trapezoid.color)")
+//
+//let rhombus = Rhombus()
+//rhombus.calculateArea()
+//print("Описание: \(rhombus.description)")
+//print("Цвет: \(rhombus.color)")
 
 
 // MARK: - Task 8 - Extensions
@@ -606,6 +606,7 @@ extension Int {
     }
 }
 
+
 extension String {
     func trimText(lenght: Int) -> String {
         guard lenght <= self.count else {
@@ -623,6 +624,7 @@ extension String {
         return self[..<endIndex] + "..."
     }
 }
+
 
 let number = 12345
 print(number.isPositive)
