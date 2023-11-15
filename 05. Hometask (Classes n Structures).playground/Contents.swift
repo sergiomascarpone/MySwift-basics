@@ -638,14 +638,6 @@ print(text.truncate(length: 10))
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
 
-class Artist {
-    var name: String
-    var age: Int
-    var jobCountry: String
-    var workExperience: Int
-    
-}
-
 /// `Свойства`
 // - имя (структура) - разрешить только чтение
 // - возраст - сделать проверку на положительное значение
@@ -654,6 +646,49 @@ class Artist {
 // - зарплата в неделю - артист может отказаться её озвучивать
 // - зарплата за день - вычисляется на основе зарплаты в неделю после того, как было установлено новое значение
 // - сколько процентов своей жизни работал артистом - computed property
+
+
+class Artist {
+    let name: String
+    var age: Int {
+        didSet {
+            if age < 0 {
+                age = 0
+            }
+        }
+    }
+    var countryOfWork: String
+    var experienceYears: Int
+    private var weeklySalary: Int?
+    
+    var dailySalary: Int {
+        if let weeklySalary = weeklySalary {
+            return weeklySalary / 7
+        }
+        return 80 // default daily salary if weekly salary is not specified
+    }
+    
+    var percentOfWorkLife: Double {
+        get {
+            return Double(experienceYears) / Double(age)
+        }
+    }
+    
+    enum Country {
+        case belarus
+        case russia
+        case ukraine
+        case other(countryName: String)
+    }
+    
+    init(name: String, age: Int, countryOfWork: String, experienceYears: Int, weeklySalary: Int?) {
+        self.name = name
+        self.age = age
+        self.countryOfWork = countryOfWork
+        self.experienceYears = experienceYears
+        self.weeklySalary = weeklySalary
+    }
+}
 
 /// `Инициализаторы`
 // 2 разных инициализатора (имя в каждом инициализаторе - обязательно)
