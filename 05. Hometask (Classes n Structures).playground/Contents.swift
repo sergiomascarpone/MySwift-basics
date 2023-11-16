@@ -592,52 +592,51 @@ import UIKit
 // 4. Добавьте типу String метод truncate(length: Int), который определит, что строка длиннее, чем length
 // А затем отсечет лишние символы и заменит их на "..."
 
-extension Int {
-    var isNegative: Bool {
-        return self < 0
-    }
-    
-    var isPositive: Bool {
-        return self > 0
-    }
-    
-    var characterCount: Int {
-        return Stride(self).count
-    }
-}
-
-
-extension String {
-    func trimText(lenght: Int) -> String {
-        guard lenght <= self.count else {
-            return self
-        }
-        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
-        return String(self[..<endIndex])
-    }
-    
-    func truncate(lenght: Int) -> String {
-        guard self.count > lenght else {
-            return self
-        }
-        let endIndex = self.index(self.startIndex, offsetBy: lenght)
-        return self[..<endIndex] + "..."
-    }
-}
-
-
-let number = 12345
-print(number.isPositive)
-print(number.isNegative)
-print(number.characterCount)
-
-let text = "Hello, world!"
-print(text.trimText(length: 5))
-print(text.truncate(length: 10))
+//extension Int {
+//    var isNegative: Bool {
+//        return self < 0
+//    }
+//    
+//    var isPositive: Bool {
+//        return self > 0
+//    }
+//    
+//    var characterCount: Int {
+//        return Stride(self).count
+//    }
+//}
+//
+//
+//extension String {
+//    func trimText(lenght: Int) -> String {
+//        guard lenght <= self.count else {
+//            return self
+//        }
+//        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
+//        return String(self[..<endIndex])
+//    }
+//    
+//    func truncate(lenght: Int) -> String {
+//        guard self.count > lenght else {
+//            return self
+//        }
+//        let endIndex = self.index(self.startIndex, offsetBy: lenght)
+//        return self[..<endIndex] + "..."
+//    }
+//}
+//
+//
+//let number = 12345
+//print(number.isPositive)
+//print(number.isNegative)
+//print(number.characterCount)
+//
+//let text = "Hello, world!"
+//print(text.trimText(length: 5))
+//print(text.truncate(length: 10))
 
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
-
 /// `Свойства`
 // - имя (структура) - разрешить только чтение
 // - возраст - сделать проверку на положительное значение
@@ -665,7 +664,7 @@ class Artist {
         if let weeklySalary = weeklySalary {
             return weeklySalary / 7
         }
-        return 80 // default daily salary if weekly salary is not specified
+        return 80
     }
     
     var percentOfWorkLife: Double {
@@ -690,6 +689,7 @@ class Artist {
     }
 }
 
+
 /// `Инициализаторы`
 // 2 разных инициализатора (имя в каждом инициализаторе - обязательно)
 
@@ -707,6 +707,24 @@ class Artist {
 
 // Создать по два экземпляра каждого класса (в том числе родителя) с различными данными, положив их в массив типа Артист.
 // Пройтись по массиву и вызвать у каждого элемента метод выступить. Если в списке попался Танцор, то вывести его зарплату за день, если Музыкант, то отобразить любимый инструмент.
+
+
+class Musician: Artist {
+    var favoriteInstrument: String
+    
+    init(favoriteInstrument: String) {
+        self.favoriteInstrument
+        self.favoriteInstrument = favoriteInstrument
+    }
+    
+    override static func displayClassName() {
+        print("Class name: Musician")
+    }
+    
+    override func perform() {
+        print("Musician performing with their faxvorite instrument: \(favoriteInstrument)")
+    }
+}
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
 // Сделать реализацию по умолчанию метода startTrip(), который выводит страну командировки и продолжительность поездки.
