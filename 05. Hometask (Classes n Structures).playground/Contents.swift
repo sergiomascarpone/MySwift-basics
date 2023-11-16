@@ -732,6 +732,18 @@ class Dancer: Artist {
     init(dailySalary: Int) {
         self.dailySalary = dailySalary
     }
+    
+    override static func displayClassName() {
+        print("Class name: Dancer")
+    }
+    
+    override func perform() {
+        if dailySalary < 100 {
+            print("Dancer refuses to perform, the salary is too low")
+        } else {
+            print("Dancer performing")
+        }
+    }
 }
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
