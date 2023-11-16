@@ -746,6 +746,12 @@ class Dancer: Artist {
     }
 }
 
+class Painter: Artist {
+    var stageName: String
+    
+    init(stageName: String)
+}
+
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
 // Сделать реализацию по умолчанию метода startTrip(), который выводит страну командировки и продолжительность поездки.
 // Позволить сущностям, который подчиняются протоколу, не реализовывать метод expressIndignation() - можно сделать через расширение
