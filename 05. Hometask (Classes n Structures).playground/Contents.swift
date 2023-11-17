@@ -749,8 +749,20 @@ class Dancer: Artist {
 class Painter: Artist {
     var stageName: String
     
-    init(stageName: String)
+    init(stageName: String) {
+        self.stageName = stageName
+    }
+    
+    override static func displayClassName() {
+        print("Class name: Painter")
+    }
+    
+    override func perform() {
+        print("Painter performing")
+    }
 }
+
+
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
 // Сделать реализацию по умолчанию метода startTrip(), который выводит страну командировки и продолжительность поездки.
