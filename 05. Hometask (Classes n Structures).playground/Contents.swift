@@ -762,10 +762,18 @@ class Painter: Artist {
     }
 }
 
+//Создан экземпляров классов
 let musician1 = Musician(favoriteInstrument: "Violin")
 let musician2 = Musician(favoriteInstrument: "Piano")
 let dancer1 = Dancer(dailySalary: 100)
 let dancer2 = Dancer(dailySalary: 70)
+let painter1 = Painter(stageName: "Artiste")
+let painter2 = Painter(stageName: "Maestro")
+
+//Массив типа Артист
+
+
+//Вызов метода для каждого эллемента
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
 // Сделать реализацию по умолчанию метода startTrip(), который выводит страну командировки и продолжительность поездки.
