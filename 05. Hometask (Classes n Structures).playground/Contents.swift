@@ -762,7 +762,10 @@ class Painter: Artist {
     }
 }
 
-
+let musician1 = Musician(favoriteInstrument: "Violin")
+let musician2 = Musician(favoriteInstrument: "Piano")
+let dancer1 = Dancer(dailySalary: 100)
+let dancer2 = Dancer(dailySalary: 70)
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
 // Сделать реализацию по умолчанию метода startTrip(), который выводит страну командировки и продолжительность поездки.
