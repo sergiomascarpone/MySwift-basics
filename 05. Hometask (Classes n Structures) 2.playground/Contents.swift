@@ -24,25 +24,25 @@ import Foundation
 //
 //let bicycle = Bicycle()
 //print("Велосипед: \(bicycle.description)")
-
-//тут попробовал поискать еще в интернете варианты, только вот осталось с ними разобраться и вникнуть. чтобы в любой момент мог написать не подглядывая)))
-
-
+//
+////тут попробовал поискать еще в интернете варианты, только вот осталось с ними разобраться и вникнуть. чтобы в любой момент мог написать не подглядывая)))
+//
+//
 //class Car {
 //    let brand: String
 //    let model: String
 //    var color: String
-//    
+//
 //    init(brand: String, model: String, color: String) {
 //        self.brand = brand
 //        self.model = model
 //        self.color = color
 //    }
-//    
+//
 //    convenience init(brand: String, model: String) {
 //        self.init(brand: brand, model: model, color: "Black")
 //    }
-//    
+//
 //    func startEngine() {
 //        print("Starting the engine of \(brand) \(model)")
 //    }
@@ -57,17 +57,17 @@ import Foundation
 //    let title: String
 //    let author: String
 //    var pageCount: Int
-//    
+//
 //    init(title: String, author: String, pageCount: Int) {
 //        self.title = title
 //        self.author = author
 //        self.pageCount = pageCount
 //    }
-//    
+//
 //    convenience init(title: String, author: String) {
 //        self.init(title: title, author: author, pageCount: 0)
 //    }
-//    
+//
 //    func read() {
 //        print("Reading \(title) by \(author)")
 //    }
@@ -81,16 +81,16 @@ import Foundation
 //class Animal {
 //    let name: String
 //    var age: Int
-//    
+//
 //    init(name: String, age: Int) {
 //        self.name = name
 //        self.age = age
 //    }
-//    
+//
 //    convenience init(name: String) {
 //        self.init(name: name, age: 0)
 //    }
-//    
+//
 //    func sleep() {
 //        print("\(name) is sleeping")
 //    }
@@ -115,7 +115,7 @@ import Foundation
 //    let lastName: String
 //    let averageScore: Int
 //}
-//   
+//
 //func studentsData(_students: [Student]) {
 //    for (index, student) in students.enumerated() {
 //        let studentNumber = index + 1
@@ -201,7 +201,7 @@ import Foundation
 //    let lastName: String
 //    let yearOfBirth: Int
 //    let averageScore: Double
-//    
+//
 //    init(name: String, lastName: String, yearOfBirth: Int, averageScore: Double) {
 //        self.name = name
 //        self.lastName = lastName
@@ -322,21 +322,21 @@ import Foundation
 //    var firstName: String
 //    var lastName: String
 //    var birthday: Birthday
-//    
+//
 //    var age: Int { // age - вычисляет возраст студента на текущую дату. Мы используем текущую дату (Date()) и текущий год (calendar.component(.year, from: currentDate)) для вычисления возраста.
 //        let currentData = Date()
 //        let calendar = Calendar.current
 //        let currentYear = calendar.component(.year, from: currentData)
-//        
+//
 //        let age = currentYear - birthday.year
-//        
+//
 //        if calendar.component(.month, from: currentData) < birthday.month || (calendar.component(.month, from: currentData) == birthday.month && calendar.component(.day, from: currentData) < birthday.day) {
 //            return age - 1
 //        } else {
 //            return age
 //        }
 //    }
-//    
+//
 //    var yearsOfStudy: Int { //yearsOfStudy - вычисляет количество лет обучения студента.
 //        if age < 6 {
 //            return 0
@@ -360,31 +360,31 @@ import Foundation
 // Вот тут немного нужно самому разобраться, а то я совсем не так понял, как и что тут работает прям досконально)))
 
 //class Person {
-//    
+//
 //    static var count = 0
-//    
+//
 //    static let minAge = 0
 //    static let maxAge = 100
-//    
+//
 //    static let minNameLenght = 2
 //    static let maxNameLenght = 50
-//    
+//
 //    static let minGrowth = 0
 //    static let minWeight = 0
-//    
+//
 //    let name: String
 //    let lastName: String
 //    let age: Int
 //    let growth: Int
 //    let weight: Int
-//    
+//
 //    init(name: String, lastName: String, age: Int, growth: Int, weight: Int) {
 //        self.name = name
 //        self.lastName = lastName
 //        self.age = age
 //        self.growth = growth
 //        self.weight = weight
-//        
+//
 //        Person.count += 1
 //    }
 //}
@@ -408,19 +408,19 @@ import Foundation
 //class Cat {
 //    private var voice: String?
 //    var name: String
-//    
+//
 //    var color: String
 //    var gender: String
 //    var size: String
-//    
+//
 //    init(name: String, color: String, gender: String, size: String) {
-//       
+//
 //        self.name = name
 //        self.color = color
 //        self.gender = gender
 //        self.size = size
 //    }
-//    
+//
 //    func makeSound() {
 //        if let voice = voice {
 //            print("\(name) says \(voice)")
@@ -432,7 +432,7 @@ import Foundation
 //
 //
 //class OrangeCat: Cat {
-//    
+//
 //    init(name: String, gender: String, size: String) {
 //        super.init(name: name, color: "Orange", gender: gender, size: size)
 //    }
@@ -440,7 +440,7 @@ import Foundation
 //
 //
 //class BlackCat: Cat {
-//    
+//
 //    init(name: String, gender: String, size: String) {
 //        super.init(name: name, color: "Black", gender: gender, size: size)
 //    }
@@ -471,7 +471,7 @@ import Foundation
 //class GeometricFigure {
 //    var description = ""
 //    var color = ""
-//    
+//
 //    func calculateArea() {
 //        print("Метод подсчёта площади фигуры")
 //    }
@@ -483,11 +483,11 @@ import Foundation
 //        super.calculateArea()
 //        print("Расчёт площади круга")
 //    }
-//    
+//
 //    override var description: String {
 //        return "Это круг"
 //    }
-//    
+//
 //    override var color: String {
 //        return "Красный"
 //    }
@@ -499,11 +499,11 @@ import Foundation
 //        super.calculateArea()
 //        print("Расчёт площади квадрата")
 //    }
-//    
+//
 //    override var description: String {
 //        return "Это квадрат"
 //    }
-//    
+//
 //    override var color: String {
 //        return "Зелёный"
 //    }
@@ -515,11 +515,11 @@ import Foundation
 //        super.calculateArea()
 //        print("Расчёт площади треугольника")
 //    }
-//    
+//
 //    override var description: String {
 //        return "Это треугольник"
 //    }
-//    
+//
 //    override var color: String {
 //        return "Красный"
 //    }
@@ -531,11 +531,11 @@ import Foundation
 //        super.calculateArea()
 //        print("Расчёт площади трапеции")
 //    }
-//    
+//
 //    override var description: String {
 //        return "Это трапеция"
 //    }
-//    
+//
 //    override var color: String {
 //        return "Зелёный"
 //    }
@@ -547,11 +547,11 @@ import Foundation
 //        super.calculateArea()
 //        print("Расчёт площади ромба")
 //    }
-//    
+//
 //    override var description: String {
 //        return "Это ромб"
 //    }
-//    
+//
 //    override var color: String {
 //        return "Красный"
 //    }
@@ -597,11 +597,11 @@ import Foundation
 //    var isNegative: Bool {
 //        return self < 0
 //    }
-//    
+//
 //    var isPositive: Bool {
 //        return self > 0
 //    }
-//    
+//
 //    var characterCount: Int {
 //        return Stride(self).count
 //    }
@@ -616,7 +616,7 @@ import Foundation
 //        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
 //        return String(self[..<endIndex])
 //    }
-//    
+//
 //    func truncate(lenght: Int) -> String {
 //        guard self.count > lenght else {
 //            return self
@@ -648,47 +648,47 @@ import Foundation
 // - сколько процентов своей жизни работал артистом - computed property
 
 
-class Artist {
-    let name: String
-    var age: Int {
-        didSet {
-            if age < 0 {
-                age = 0
-            }
-        }
-    }
-    var countryOfWork: String
-    var experienceYears: Int
-    private var weeklySalary: Int?
-    
-    var dailySalary: Int {
-        if let weeklySalary = weeklySalary {
-            return weeklySalary / 7
-        }
-        return 80
-    }
-    
-    var percentOfWorkLife: Double {
-        get {
-            return Double(experienceYears) / Double(age)
-        }
-    }
-    
-    enum Country {
-        case belarus
-        case russia
-        case ukraine
-        case other(countryName: String)
-    }
-    
-    init(name: String, age: Int, countryOfWork: String, experienceYears: Int, weeklySalary: Int?) {
-        self.name = name
-        self.age = age
-        self.countryOfWork = countryOfWork
-        self.experienceYears = experienceYears
-        self.weeklySalary = weeklySalary
-    }
-}
+//class Artist {
+//    let name: String
+//    var age: Int {
+//        didSet {
+//            if age < 0 {
+//                age = 0
+//            }
+//        }
+//    }
+//    var countryOfWork: String
+//    var experienceYears: Int
+//    private var weeklySalary: Int?
+//
+//    var dailySalary: Int {
+//        if let weeklySalary = weeklySalary {
+//            return weeklySalary / 7
+//        }
+//        return 80
+//    }
+//
+//    var percentOfWorkLife: Double {
+//        get {
+//            return Double(experienceYears) / Double(age)
+//        }
+//    }
+//
+//    enum Country {
+//        case belarus
+//        case russia
+//        case ukraine
+//        case other(countryName: String)
+//    }
+//
+//    init(name: String, age: Int, countryOfWork: String, experienceYears: Int, weeklySalary: Int?) {
+//        self.name = name
+//        self.age = age
+//        self.countryOfWork = countryOfWork
+//        self.experienceYears = experienceYears
+//        self.weeklySalary = weeklySalary
+//    }
+//}
 
 
 /// `Инициализаторы`
@@ -709,71 +709,73 @@ class Artist {
 // Создать по два экземпляра каждого класса (в том числе родителя) с различными данными, положив их в массив типа Артист.
 // Пройтись по массиву и вызвать у каждого элемента метод выступить. Если в списке попался Танцор, то вывести его зарплату за день, если Музыкант, то отобразить любимый инструмент.
 
-
-class Musician: Artist {
-    var favoriteInstrument: String
-    
-    init(favoriteInstrument: String) {
-        self.favoriteInstrument
-        self.favoriteInstrument = favoriteInstrument
-    }
-    
-    override static func displayClassName() {
-        print("Class name: Musician")
-    }
-    
-    override func perform() {
-        print("Musician performing with their faxvorite instrument: \(favoriteInstrument)")
-    }
-}
-
-class Dancer: Artist {
-    var dailySalary: Int
-    
-    init(dailySalary: Int) {
-        self.dailySalary = dailySalary
-    }
-    
-    override static func displayClassName() {
-        print("Class name: Dancer")
-    }
-    
-    override func perform() {
-        if dailySalary < 100 {
-            print("Dancer refuses to perform, the salary is too low")
-        } else {
-            print("Dancer performing")
-        }
-    }
-}
-
-class Painter: Artist {
-    var stageName: String
-    
-    init(stageName: String) {
-        self.stageName = stageName
-    }
-    
-    override static func displayClassName() {
-        print("Class name: Painter")
-    }
-    
-    override func perform() {
-        print("Painter performing")
-    }
-}
-
-//Создан экземпляров классов
-let musician1 = Musician(favoriteInstrument: "Violin")
-let musician2 = Musician(favoriteInstrument: "Piano")
-let dancer1 = Dancer(dailySalary: 100)
-let dancer2 = Dancer(dailySalary: 70)
-let painter1 = Painter(stageName: "Artiste")
-let painter2 = Painter(stageName: "Maestro")
+//некоторые моменты всё еще не смог сделать сам, без помощи интернета
 
 
-//Массив типа Артист
-let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
+//class Musician: Artist {
+//    var favoriteInstrument: String
+//
+//    init(favoriteInstrument: String) {
+//        self.favoriteInstrument
+//        self.favoriteInstrument = favoriteInstrument
+//    }
+//
+//    override static func displayClassName() {
+//        print("Class name: Musician")
+//    }
+//
+//    override func perform() {
+//        print("Musician performing with their faxvorite instrument: \(favoriteInstrument)")
+//    }
+//}
+//
+//class Dancer: Artist {
+//    var dailySalary: Int
+//
+//    init(dailySalary: Int) {
+//        self.dailySalary = dailySalary
+//    }
+//
+//    override static func displayClassName() {
+//        print("Class name: Dancer")
+//    }
+//
+//    override func perform() {
+//        if dailySalary < 100 {
+//            print("Dancer refuses to perform, the salary is too low")
+//        } else {
+//            print("Dancer performing")
+//        }
+//    }
+//}
+//
+//class Painter: Artist {
+//    var stageName: String
+//
+//    init(stageName: String) {
+//        self.stageName = stageName
+//    }
+//
+//    override static func displayClassName() {
+//        print("Class name: Painter")
+//    }
+//
+//    override func perform() {
+//        print("Painter performing")
+//    }
+//}
+//
+////Создан экземпляров классов
+//let musician1 = Musician(favoriteInstrument: "Violin")
+//let musician2 = Musician(favoriteInstrument: "Piano")
+//let dancer1 = Dancer(dailySalary: 100)
+//let dancer2 = Dancer(dailySalary: 70)
+//let painter1 = Painter(stageName: "Artiste")
+//let painter2 = Painter(stageName: "Maestro")
+//
+//
+////Массив типа Артист
+//let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
 
 ////Вызов метода для каждого эллемента
 //for artist in artist {
