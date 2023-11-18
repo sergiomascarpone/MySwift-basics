@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 // MARK: - Task 1 - Classes + Initialization
 // 1. Создайте 3 любых класса и реализуйте в них инициализаторы разного типа
@@ -774,10 +775,10 @@ let painter2 = Painter(stageName: "Maestro")
 //Массив типа Артист
 let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
 
-//Вызов метода для каждого эллемента
-for artist in artist {
-    artist.perform()
-}
+////Вызов метода для каждого эллемента
+//for artist in artist {
+//    artist.perform()
+//}
 
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
