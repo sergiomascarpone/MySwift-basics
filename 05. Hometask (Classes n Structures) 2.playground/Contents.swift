@@ -584,7 +584,7 @@ import Foundation
 //print("Цвет: \(rhombus.color)")
 
 
-// MARK: - Task 8 - Extensions...
+// MARK: - Task 8 - Extensions.
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
 // 2. Добавьте свойство, которое возвращает количество символов в числе
 // 3. Добавьте типу String метод trimText(), чтобы он мог отсекать N последних символов
