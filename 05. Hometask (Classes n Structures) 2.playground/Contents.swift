@@ -1,6 +1,4 @@
 import UIKit
-import Foundation
-
 
 // MARK: - Task 1 - Classes + Initialization
 // 1. Создайте 3 любых класса и реализуйте в них инициализаторы разного типа
@@ -25,10 +23,11 @@ import Foundation
 //
 //let bicycle = Bicycle()
 //print("Велосипед: \(bicycle.description)")
-//
-////тут попробовал поискать еще в интернете варианты, только вот осталось с ними разобраться и вникнуть. чтобы в любой момент мог написать не подглядывая)))
-//
-//
+
+
+//тут попробовал поискать еще в интернете варианты, только вот осталось с ними разобраться и вникнуть. чтобы в любой момент мог написать не подглядывая)))
+
+
 //class Car {
 //    let brand: String
 //    let model: String
@@ -102,6 +101,58 @@ import Foundation
 //animal2.sleep()
 
 
+// Класс с базовым инициализатором
+class Person {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+// Класс с дополнительным инициализатором
+class Car {
+    var brand: String
+    var model: String
+
+    init(brand: String, model: String) {
+        self.brand = brand
+        self.model = model
+    }
+
+    convenience init(brand: String) {
+        self.init(brand: brand, model: "Unknown")
+    }
+}
+
+// Класс с инициализатором, принимающим опциональный параметр
+class Book {
+    var title: String
+    var author: String
+
+    init(title: String, author: String?) {
+        self.title = title
+        self.author = author ?? "Unknown Author"
+    }
+}
+
+// Пример использования классов и их инициализаторов
+let person = Person(name: "John Doe")
+print("Person: \(person.name)")
+
+let car1 = Car(brand: "Toyota", model: "Camry")
+print("Car 1: \(car1.brand) \(car1.model)")
+
+let car2 = Car(brand: "Honda")
+print("Car 2: \(car2.brand) \(car2.model)")
+
+let book1 = Book(title: "The Great Gatsby", author: "F. Scott Fitzgerald")
+print("Book 1: \(book1.title) by \(book1.author)")
+
+let book2 = Book(title: "1984", author: nil)
+print("Book 2: \(book2.title) by \(book2.author)")
+
+
 // MARK: - Task 2 - Structure
 // Используйте решение и предыдущей домашней работы
 // Если домашнее было не выполнено, тогда реализуйте Ваше решение ниже.
@@ -116,14 +167,15 @@ import Foundation
 //    let lastName: String
 //    let averageScore: Int
 //}
-//
-//func studentsData(_students: [Student]) {
+
+//func studentsData(students: [Student]) {
 //    for (index, student) in students.enumerated() {
 //        let studentNumber = index + 1
 //        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
-////        print("Name \(student.name)")
-////        print("LastNme \(student.lastName)")
-////        print("AverageScore \(student.averageScore)")
+// лишние принты убрать можно
+//        print("Name \(student.name)")
+//        print("LastNme \(student.lastName)")
+//        print("AverageScore \(student.averageScore)")
 //    }
 //}
 //
@@ -136,20 +188,23 @@ import Foundation
 //]
 //
 //
-//studentsData(_students: [])
+//studentsData(students: [])
 
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
 
-//func studentsData(_students: [Student]) {
+//func studentsData(students: [Student]) {
 //    for (index, student) in students.enumerated() {
 //        let studentNumber = index + 1
 //        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
-//       print("Name \(student.name)")
-//       print("LastNme \(student.lastName)")
-//       print("AverageScore \(student.averageScore)")
-
+//        print("Name \(student.name)")
+//        print("LastNme \(student.lastName)")
+//        print("AverageScore \(student.averageScore)")
+//
+//        // ТУТ НЕ БЫЛО ДВУХ СКОБОЧЕК
+//    }
+//}
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
 
@@ -165,8 +220,8 @@ import Foundation
 //    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
 //}
 //
-//// 4. Отсортируйте теперь массив по фамилии (по возрастанию).
-//// Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
+// 4. Отсортируйте теперь массив по фамилии (по возрастанию).
+// Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
 //
 //let sortedByLastName = students.sorted { $0.lastName < $1.lastName }
 //print("\nSorted by last name:")
@@ -179,13 +234,17 @@ import Foundation
 // Изменится ли первый массив?
 // Распечатайте оба массива.
 
-//С этим я совсем запутался и наверное сделал не так как надо((
-//var studentArray = [students]
+//students у тебя и так массив
+//var studentArray = students
+//
+//studentArray[0] = Student(name: "NewName", lastName: "NewLastName", averageScore: 9)
+//studentArray[2] = Student(name: "NewName1", lastName: "NewLastName1", averageScore: 8)
+//
+//print("Original Array:")
+//print(students)
+//
+//print("\nModified Array:")
 //print(studentArray)
-//
-//
-//var updatedStudentsArray = [Student(name: "Galina", lastName: "Olegovna", averageScore: 5)]
-//print(updatedStudentsArray)
 
 
 // MARK: - Task 3 - Classes
@@ -210,8 +269,8 @@ import Foundation
 //        self.averageScore = averageScore
 //    }
 //}
-//
-//func studentsData(_students: [Student]) {
+
+//func studentsData(students: [Student]) {
 //    for (index, student) in student.enumerated() {
 //        let studentNumber = index + 1
 //        print("Student№: \(studentNumber). Name: \(student.name). LastName: \(student.lastName). YearOfBirth: \(student.yearOfBirth). AverageScore: \(student.averageScore)")
@@ -221,7 +280,7 @@ import Foundation
 ////        print("AverageScore \(student.averageScore)")
 //    }
 //}
-//
+
 //let student: [Student] = [
 //    Student(name: "Sergey", lastName: "Maximov", yearOfBirth: 29, averageScore: 5),
 //    Student(name: "Viktoria", lastName: "Olegovna", yearOfBirth: 27, averageScore: 3.7),
@@ -230,18 +289,20 @@ import Foundation
 //    Student(name: "Pavel", lastName: "Vladimirovich", yearOfBirth: 28, averageScore: 5),
 //    Student(name: "Svetlana", lastName: "Philipenko", yearOfBirth: 27, averageScore: 4.7)
 //]
-//
-//studentsData(_students: [])
+
+//studentsData(students: [])
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
 
-//func studentsJournal(_students: [Student]) {
-//    for (index, student) in students.enumerated() {
+//func studentsJournal(students: [Student]) {
+//    for (index, student) in student.enumerated() {
 //        let studentNumber = index + 1
 //        print("Student№:\(studentNumber). Name: \(student.name), LastName: \(student.lastName), YearOfBirth: \(student.yearOfBirth), AverageScore: \(student.averageScore)")
 //    }
 //}
+//
+//studentsJournal(students: student)
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
 
@@ -266,7 +327,7 @@ import Foundation
 //for Student in sortedPeople {
 //    print("Name: \(Student.name). LastName:\(Student.lastName). YearOfBirth: \(Student.yearOfBirth). AverageScore: \(Student.averageScore)")
 //}
-
+//
 //let sortedlastName = student.sorted { $0.lastName < $1.lastName }
 //print("nSorted by Last Name:")
 //for student in sortedlastName {
@@ -297,13 +358,25 @@ import Foundation
 //print(updatedStudentsArray)
 
 // MARK: - Почему по итогу массивы из заданий 2 и 3 менялись / не менялись? Чем это обусловлено?
+
 // Это 5 задание которое я не смог правильно сделать, но если логически подумать, то данные массива должны будут изменится в классе так как класс это ссылочный тип, и остаться неизменным в структуре, так как это значимый тип.
 
+// MARK: по аналогии сделай для классов 5 задание. для структур я написала
 
 // MARK: - Резюмируйте, чем отличаются классы от структур и когда что лучше использовать?
 
 // Структуры это значимый тип, а классы ссылочный тип. Если по документации, то по умолчанию лучше структуры. Нам проще анализировать свой код, так как структура не может быть изменена другой частью кода.
 // С помощью класса, мы можем четко опредеоить родительско-дочернюю связь между классом и подклассом.
+
+// MARK: - прочитать
+//Классы - ссылочные типы. Когда вы передаете или присваиваете класс, передается ссылка на объект.
+//Структуры - значимые типы. Они передаются по значению, создавая копию.
+//
+//Классы - могут поддерживать наследование, т.е. создавать подклассы.
+//Структуры - не поддерживают наследование.
+//
+//Классы передаются по ссылке. Изменения в одном экземпляре отражаются на других, так как они ссылаются на один и тот же объект в памяти.
+//Структуры передаются по значению. Каждый экземпляр - это отдельная копия данных.
 
 
 // MARK: - Task 4 - Properties
@@ -350,6 +423,42 @@ import Foundation
 //print("Age: \(student.age)")
 //print("Years of study: \(student.yearsOfStudy)")
 
+// MARK: посмотреть
+//Поскольку currentData и currentYear используются только один раз, можно инициализировать их непосредственно в соответствующих выражениях.
+//Вместо использования calendar.component(.year, from: currentData) и calendar.component(.month, from: currentData),  можно использовать calendar.dateComponents([.year, .month], from: currentData) для получения сразу нескольких компонентов.
+//Можно использовать условный оператор ? : для более компактного кода.
+
+//struct Birthday {
+//    var day: Int
+//    var month: Int
+//    var year: Int
+//}
+//
+//struct Student {
+//    var firstName: String
+//    var lastName: String
+//    var birthday: Birthday
+//
+//    var age: Int {
+//        let currentData = Date()
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.year, .month], from: currentData)
+//
+//        let age = components.year! - birthday.year
+//
+//        return (components.month! < birthday.month || (components.month! == birthday.month && calendar.component(.day, from: currentData) < birthday.day)) ? age - 1 : age
+//    }
+//
+//    var yearsOfStudy: Int {
+//        return max(0, age - 6)
+//    }
+//}
+//
+//let student = Student(firstName: "Oleg", lastName: "Tinkov", birthday: Birthday(day: 12, month: 4, year: 1989))
+//print("Age: \(student.age)")
+//print("Years of study: \(student.yearsOfStudy)")
+
+
 // MARK: - Task 5 - Properties
 // 1. Создайте класс Человек, который будет содержать имя, фамилию, возраст, рост и вес.
 // 2. Добавьте несколько свойств непосредственно этому классу чтобы контролировать:
@@ -377,15 +486,25 @@ import Foundation
 //    let age: Int
 //    let growth: Int
 //    let weight: Int
+
+// MARK: нет проверок для установленных ограничений (например, проверки возраста, длины имени и фамилии).
 //
 //    init(name: String, lastName: String, age: Int, growth: Int, weight: Int) {
-//        self.name = name
-//        self.lastName = lastName
-//        self.age = age
-//        self.growth = growth
-//        self.weight = weight
+// Добавляем проверки для соответствия ограничениям
+//       self.name = name.count >= Person.minNameLength && name.count <= Person.maxNameLength ? name : "InvalidName"
+//       self.lastName = lastName.count >= Person.minNameLength && lastName.count <= Person.maxNameLength ? lastName : "InvalidLastName"
+//       self.age = (age >= Person.minAge && age <= Person.maxAge) ? age : 0
+//       self.growth = max(growth, Person.minGrowth)
+//       self.weight = max(weight, Person.minWeight)
 //
-//        Person.count += 1
+//       Person.count += 1
+////        self.name = name
+////        self.lastName = lastName
+////        self.age = age
+////        self.growth = growth
+////        self.weight = weight
+////
+////        Person.count += 1
 //    }
 //}
 //
@@ -405,6 +524,8 @@ import Foundation
 // 7. Реализуйте конструктор, который в качестве аргумента принимает имя животного и устанавливает его в переменную с соответствующим уровнем доступа, который не позволяет переопределить её в дочерних классах
 
 //Пока не работает и я не могу понять почему(((( Оказывается дело было в том. что аргумент «пол» должен предшествовать аргументу «размер», а у меня было по другому)) тут и смог разобраться.
+
+//MARK:  необходимо добавить реализацию для управления свойством voice, чтобы удовлетворить требования задания.
 //class Cat {
 //    private var voice: String?
 //    var name: String
@@ -457,7 +578,69 @@ import Foundation
 //oliviaCat.makeSound()
 //
 
+// MARK: вот вариант
+//class Cat {
+//    private var voice: String?
+//
+//    var name: String {
+//        didSet {
+//            // Ограничиваем изменение имени только для чтения
+//            name = oldValue
+//        }
+//    }
+//
+//    var color: String
+//    var gender: String
+//    var size: String
+//
+//    init(name: String, color: String, gender: String, size: String) {
+//        self.name = name
+//        self.color = color
+//        self.gender = gender
+//        self.size = size
+//    }
+//
+//    func makeSound() {
+//        if let voice = voice {
+//            print("\(name) says \(voice)")
+//        } else {
+//            print("\(name) is silent")
+//        }
+//    }
+//}
+//
+//class OrangeCat: Cat {
+//
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Orange", gender: gender, size: size)
+//    }
+//}
+//
+//class BlackCat: Cat {
+//
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Black", gender: gender, size: size)
+//    }
+//}
+//
+//let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
+//print(garfieldCat.name)
+//garfieldCat.makeSound()
+//
+//let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
+//print(oliviaCat.name)
+//oliviaCat.makeSound()
+
+
 // MARK: - Task 7 - Overriding
+// MARK: надо сделать:
+// использовать общий конструктор в родительском классе GeometricFigure для установки описания и цвета, а затем вызывать этот конструктор в подклассах.
+//
+//Используй более информативные имена переменных и констант, чтобы сделать код более понятным.
+//
+//Вместо print в методе calculateArea, возможно, стоит возвращать значение площади, чтобы можно было использовать результат при необходимости.
+
+
 // 1. Создайте класс Геометрическая фигура и реализуйте в нем метод подсчета площади фигуры
 // 2. Создайте 5 классов-наследников: Круг, Квадрат, Треугольник, Трапеция и Ромб
 // 3. Переопределите метод подсчета площади фигуры и реализуйте расчет этой площади для каждой фигуры
@@ -584,7 +767,7 @@ import Foundation
 //print("Цвет: \(rhombus.color)")
 
 
-// MARK: - Task 8 - Extensions.
+// MARK: - Task 8 - Extensions
 // 1. Создайте расширение для Int со свойствами isNegative, isPositive
 // 2. Добавьте свойство, которое возвращает количество символов в числе
 // 3. Добавьте типу String метод trimText(), чтобы он мог отсекать N последних символов
@@ -593,48 +776,48 @@ import Foundation
 // 4. Добавьте типу String метод truncate(length: Int), который определит, что строка длиннее, чем length
 // А затем отсечет лишние символы и заменит их на "..."
 
-//extension Int {
-//    var isNegative: Bool {
-//        return self < 0
-//    }
-//
-//    var isPositive: Bool {
-//        return self > 0
-//    }
-//
-//    var characterCount: Int {
-//        return Stride(self).count
-//    }
-//}
-//
-//
-//extension String {
-//    func trimText(lenght: Int) -> String {
-//        guard lenght <= self.count else {
-//            return self
-//        }
-//        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
-//        return String(self[..<endIndex])
-//    }
-//
-//    func truncate(lenght: Int) -> String {
-//        guard self.count > lenght else {
-//            return self
-//        }
-//        let endIndex = self.index(self.startIndex, offsetBy: lenght)
-//        return self[..<endIndex] + "..."
-//    }
-//}
-//
-//
-//let number = 12345
-//print(number.isPositive)
-//print(number.isNegative)
-//print(number.characterCount)
-//
-//let text = "Hello, world!"
+extension Int {
+    var isNegative: Bool {
+        return self < 0
+    }
+    
+    var isPositive: Bool {
+        return self > 0
+    }
+    
+    var characterCount: Int {
+        return String(self).count
+    }
+}
+
+
+extension String {
+    func trimText(lenght: Int) -> String {
+        guard lenght <= self.count else {
+            return self
+        }
+        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
+        return String(self[..<endIndex])
+    }
+    
+    func truncate(lenght: Int) -> String {
+        guard self.count > lenght else {
+            return self
+        }
+        let endIndex = self.index(self.startIndex, offsetBy: lenght)
+        return self[..<endIndex] + "..."
+    }
+}
+
+
+let number = 12345
+print(number.isPositive)
+print(number.isNegative)
+print(number.characterCount)
+
+let text = "Hello, world!"
 //print(text.trimText(length: 5))
-//print(text.truncate(length: 10))
+print(text.truncate(lenght: 10))
 
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
