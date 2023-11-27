@@ -162,49 +162,49 @@ print("Book 2: \(book2.title) by \(book2.author)")
 // Создайте несколько экземпляров этой структуры и заполните их данными.
 // Положите их всех в массив (журнал).
 
-//struct Student {
-//    let name: String
-//    let lastName: String
-//    let averageScore: Int
-//}
+struct Student {
+    let name: String
+    let lastName: String
+    let averageScore: Int
+}
 
-//func studentsData(students: [Student]) {
-//    for (index, student) in students.enumerated() {
-//        let studentNumber = index + 1
-//        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
-// лишние принты убрать можно
+func studentsData(students: [Student]) {
+    for (index, student) in students.enumerated() {
+        let studentNumber = index + 1
+        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
+//лишние принты убрать можно
 //        print("Name \(student.name)")
 //        print("LastNme \(student.lastName)")
 //        print("AverageScore \(student.averageScore)")
-//    }
-//}
-//
-//
-//let students: [Student] = [
-//    Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
-//    Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
-//    Student(name: "Egor", lastName: "Sergeevich", averageScore: 5),
-//    Student(name: "Sergey", lastName: "Olegivich", averageScore: 4)
-//]
-//
-//
-//studentsData(students: [])
+    }
+}
+
+
+let students: [Student] = [
+    Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
+    Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
+    Student(name: "Egor", lastName: "Sergeevich", averageScore: 5),
+    Student(name: "Sergey", lastName: "Olegivich", averageScore: 4)
+]
+
+
+studentsData(students: [])
 
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
 // Перед выводом каждого студента добавляйте порядковый номер в “журнале”, начиная с 1.
 
-//func studentsData(students: [Student]) {
-//    for (index, student) in students.enumerated() {
-//        let studentNumber = index + 1
-//        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
+func studentsData(students: [Student]) {
+    for (index, student) in students.enumerated() {
+        let studentNumber = index + 1
+        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
 //        print("Name \(student.name)")
 //        print("LastNme \(student.lastName)")
 //        print("AverageScore \(student.averageScore)")
-//
-//        // ТУТ НЕ БЫЛО ДВУХ СКОБОЧЕК
-//    }
-//}
+
+        // ТУТ НЕ БЫЛО ДВУХ СКОБОЧЕК
+    }
+}
 
 // 3. Отсортируйте массив по среднему баллу по убыванию и распечатайте “журнал”.
 
