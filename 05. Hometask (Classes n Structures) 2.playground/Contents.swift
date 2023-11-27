@@ -230,16 +230,17 @@ for student in sortedAverageScore {
 //    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
 //}
 
-students.sort {
-    if $0.lastName == $1.lastName {
-        return $0.name < $1.name
-    } else {
-        return $0.lastName < $1.lastName
-    }
-}
-for student in students {
-    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
-}
+// вот такой еще вариант попробовал в сортировки, но не знаю правильно ли(
+//students.sort {
+//    if $0.lastName == $1.lastName {
+//        return $0.name < $1.name
+//    } else {
+//        return $0.lastName < $1.lastName
+//    }
+//}
+//for student in students {
+//    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
+//}
 
 
 // 5. Создайте переменную и присвойте ей ваш существующий массив.
