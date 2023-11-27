@@ -180,7 +180,7 @@ func studentsData(students: [Student]) {
 }
 
 
-let students: [Student] = [
+var students: [Student] = [
     Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
     Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
     Student(name: "Egor", lastName: "Sergeevich", averageScore: 5),
@@ -224,11 +224,23 @@ for student in sortedAverageScore {
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
 //
-let sortedByLastName = students.sorted { $0.lastName < $1.lastName }
-print("\nSorted by last name:")
-for student in sortedByLastName {
+//let sortedByLastName = students.sorted { $0.lastName < $1.lastName }
+//print("\nSorted by last name:")
+//for student in sortedByLastName {
+//    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
+//}
+
+students.sort {
+    if $0.lastName == $1.lastName {
+        return $0.name < $1.name
+    } else {
+        return $0.lastName < $1.lastName
+    }
+}
+for student in students {
     print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
 }
+
 
 // 5. Создайте переменную и присвойте ей ваш существующий массив.
 // Измените в нем данные всех студентов.
