@@ -382,6 +382,7 @@ for student in sortedAverageScore {
 // Структуры это значимый тип, а классы ссылочный тип. Если по документации, то по умолчанию лучше структуры. Нам проще анализировать свой код, так как структура не может быть изменена другой частью кода.
 // С помощью класса, мы можем четко опредеоить родительско-дочернюю связь между классом и подклассом.
 
+
 // MARK: - прочитать
 //Классы - ссылочные типы. Когда вы передаете или присваиваете класс, передается ссылка на объект.
 //Структуры - значимые типы. Они передаются по значению, создавая копию.
@@ -480,6 +481,7 @@ for student in sortedAverageScore {
 // - минимальную и максимальную длину имени и фамилии
 // - минимально возможный рост и вес
 // - создайте свойство, которое будет содержать количество созданных объектов этого класса
+
 // Вот тут немного нужно самому разобраться, а то я совсем не так понял, как и что тут работает прям досконально)))
 
 //class Person {
@@ -593,57 +595,57 @@ for student in sortedAverageScore {
 //
 
 // MARK: вот вариант
-//class Cat {
-//    private var voice: String?
-//
-//    var name: String {
-//        didSet {
-//            // Ограничиваем изменение имени только для чтения
-//            name = oldValue
-//        }
-//    }
-//
-//    var color: String
-//    var gender: String
-//    var size: String
-//
-//    init(name: String, color: String, gender: String, size: String) {
-//        self.name = name
-//        self.color = color
-//        self.gender = gender
-//        self.size = size
-//    }
-//
-//    func makeSound() {
-//        if let voice = voice {
-//            print("\(name) says \(voice)")
-//        } else {
-//            print("\(name) is silent")
-//        }
-//    }
-//}
-//
-//class OrangeCat: Cat {
-//
-//    init(name: String, gender: String, size: String) {
-//        super.init(name: name, color: "Orange", gender: gender, size: size)
-//    }
-//}
-//
-//class BlackCat: Cat {
-//
-//    init(name: String, gender: String, size: String) {
-//        super.init(name: name, color: "Black", gender: gender, size: size)
-//    }
-//}
-//
-//let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
-//print(garfieldCat.name)
-//garfieldCat.makeSound()
-//
-//let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
-//print(oliviaCat.name)
-//oliviaCat.makeSound()
+class Cat {
+    private var voice: String?
+
+    var name: String {
+        didSet {
+            // Ограничиваем изменение имени только для чтения
+            name = oldValue
+        }
+    }
+
+    var color: String
+    var gender: String
+    var size: String
+
+    init(name: String, color: String, gender: String, size: String) {
+        self.name = name
+        self.color = color
+        self.gender = gender
+        self.size = size
+    }
+
+    func makeSound() {
+        if let voice = voice {
+            print("\(name) says \(voice)")
+        } else {
+            print("\(name) is silent")
+        }
+    }
+}
+
+class OrangeCat: Cat {
+
+    init(name: String, gender: String, size: String) {
+        super.init(name: name, color: "Orange", gender: gender, size: size)
+    }
+}
+
+class BlackCat: Cat {
+
+    init(name: String, gender: String, size: String) {
+        super.init(name: name, color: "Black", gender: gender, size: size)
+    }
+}
+
+let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
+print(garfieldCat.name)
+garfieldCat.makeSound()
+
+let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
+print(oliviaCat.name)
+oliviaCat.makeSound()
 
 
 // MARK: - Task 7 - Overriding
@@ -665,120 +667,118 @@ for student in sortedAverageScore {
 // 8. Если фигуры - Круг, Треугольник или Ромб - задайте им красный цвет
 // 9. Если фигуры - Квадрат или Трапеция - задайте им зеленый цвет
 
-//class GeometricFigure {
-//    var description = ""
-//    var color = ""
-//
-//    func calculateArea() {
-//        print("Метод подсчёта площади фигуры")
-//    }
-//}
-//
-//
-//class Circle: GeometricFigure {
-//    override func calculateArea() {
-//        super.calculateArea()
-//        print("Расчёт площади круга")
-//    }
-//
-//    override var description: String {
-//        return "Это круг"
-//    }
-//
-//    override var color: String {
-//        return "Красный"
-//    }
-//}
-//
-//
-//class Square: GeometricFigure {
-//    override func calculateArea() {
-//        super.calculateArea()
-//        print("Расчёт площади квадрата")
-//    }
-//
-//    override var description: String {
-//        return "Это квадрат"
-//    }
-//
-//    override var color: String {
-//        return "Зелёный"
-//    }
-//}
-//
-//
-//class Triangle: GeometricFigure {
-//    override func calculateArea() {
-//        super.calculateArea()
-//        print("Расчёт площади треугольника")
-//    }
-//
-//    override var description: String {
-//        return "Это треугольник"
-//    }
-//
-//    override var color: String {
-//        return "Красный"
-//    }
-//}
-//
-//
-//class Trapezoid: GeometricFigure {
-//    override func calculateArea() {
-//        super.calculateArea()
-//        print("Расчёт площади трапеции")
-//    }
-//
-//    override var description: String {
-//        return "Это трапеция"
-//    }
-//
-//    override var color: String {
-//        return "Зелёный"
-//    }
-//}
-//
-//
-//class Rhombus: GeometricFigure {
-//    override func calculateArea() {
-//        super.calculateArea()
-//        print("Расчёт площади ромба")
-//    }
-//
-//    override var description: String {
-//        return "Это ромб"
-//    }
-//
-//    override var color: String {
-//        return "Красный"
-//    }
-//}
-//
-//
-//let circle = Circle()
-//circle.calculateArea()
-//print("Описание: \(circle.description)")
-//print("Цвет: \(circle.color)")
-//
-//let square = Square()
-//square.calculateArea()
-//print("Описание: \(square.description)")
-//print("Цвет: \(square.color)")
-//
-//let triangle = Triangle()
-//triangle.calculateArea()
-//print("Описание: \(triangle.description)")
-//print("Цвет: \(triangle.color)")
-//
-//let trapezoid = Trapezoid()
-//trapezoid.calculateArea()
-//print("Описание: \(trapezoid.description)")
-//print("Цвет: \(trapezoid.color)")
-//
-//let rhombus = Rhombus()
-//rhombus.calculateArea()
-//print("Описание: \(rhombus.description)")
-//print("Цвет: \(rhombus.color)")
+// Родительский класс GeometricFigure
+class GeometricFigure {
+    let description: String
+    var color: String = "Red"
+    
+    init(description: String) {
+        self.description = description
+    }
+    
+    func calculateArea() -> Double {
+        return 0.0
+    }
+}
+
+// Класс Круг
+class Circle: GeometricFigure {
+    let radius: Double
+    
+    init(radius: Double) {
+        self.radius = radius
+        super.init(description: "Circle")
+        self.color = "Red"
+    }
+    
+    override func calculateArea() -> Double {
+        return Double.pi * radius * radius
+    }
+}
+
+// Класс Квадрат
+class Square: GeometricFigure {
+    let sideLength: Double
+    
+    init(sideLength: Double) {
+        self.sideLength = sideLength
+        super.init(description: "Square")
+        self.color = "Green"
+    }
+    
+    override func calculateArea() -> Double {
+        return sideLength * sideLength
+    }
+}
+
+// Класс Треугольник
+class Triangle: GeometricFigure {
+    let base: Double
+    let height: Double
+    
+    init(base: Double, height: Double) {
+        self.base = base
+        self.height = height
+        super.init(description: "Triangle")
+        self.color = "Red"
+    }
+    
+    override func calculateArea() -> Double {
+        return 0.5 * base * height
+    }
+}
+
+// Класс Трапеция
+class Trapezoid: GeometricFigure {
+    let base1: Double
+    let base2: Double
+    let height: Double
+    
+    init(base1: Double, base2: Double, height: Double) {
+        self.base1 = base1
+        self.base2 = base2
+        self.height = height
+        super.init(description: "Trapezoid")
+        self.color = "Green"
+    }
+    
+    override func calculateArea() -> Double {
+        return 0.5 * (base1 + base2) * height
+    }
+}
+
+// Класс Ромб
+class Rhombus: GeometricFigure {
+    let diagonal1: Double
+    let diagonal2: Double
+    
+    init(diagonal1: Double, diagonal2: Double) {
+        self.diagonal1 = diagonal1
+        self.diagonal2 = diagonal2
+        super.init(description: "Rhombus")
+        self.color = "Red"
+    }
+    
+    override func calculateArea() -> Double {
+        return 0.5 * diagonal1 * diagonal2
+    }
+}
+
+// Создание объектов и вывод результатов
+let circle = Circle(radius: 5.0)
+print("\(circle.description) - Площадь: \(circle.calculateArea()), Цвет: \(circle.color)")
+
+let square = Square(sideLength: 4.0)
+print("\(square.description) - Площадь: \(square.calculateArea()), Цвет: \(square.color)")
+
+let triangle = Triangle(base: 3.0, height: 6.0)
+print("\(triangle.description) - Площадь: \(triangle.calculateArea()), Цвет: \(triangle.color)")
+
+let trapezoid = Trapezoid(base1: 4.0, base2: 6.0, height: 5.0)
+print("\(trapezoid.description) - Площадь: \(trapezoid.calculateArea()), Цвет: \(trapezoid.color)")
+
+let rhombus = Rhombus(diagonal1: 4.0, diagonal2: 6.0)
+print("\(rhombus.description) - Площадь: \(rhombus.calculateArea()), Цвет: \(rhombus.color)")
 
 
 // MARK: - Task 8 - Extensions
