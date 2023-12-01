@@ -1009,6 +1009,24 @@ extension Artist: BusinesTrip {
         print("Завершаем командировку.")
     }
 }
+
+// Создание расширения для реализации метода expressIndignation
+
+extension Painter: BusinesTrip {
+    var country: String {
+        return "Название страны"
+    }
+    
+    var duration: Int {
+        return 8
+    }
+    
+    func endTrip() {
+        print("Завершаем командировку.")
+    }
+    
+    func
+}
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
 
