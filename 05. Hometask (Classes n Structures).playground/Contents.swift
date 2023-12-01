@@ -996,7 +996,19 @@ protocol BusinesTrip {
     func startTrip()
     func endTrip()
 }
+// Реализация расширения по умолчанию для метода
+startTrip()
+extension BusinesTrip {
+    func startTrip() {
+        print("Отправляемся в командировку в \(country) на \(duration) дней.")
+    }
+}
 
+extension Artist: BusinesTrip {
+    func endTrip() {
+        print("Завершаем командировку.")
+    }
+}
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
 
