@@ -669,118 +669,118 @@ oliviaCat.makeSound()
 
 //ну тут пришлось мне воспользоваться поиском, и полностью всё переделал. Самому конечно до самостоятельного решения такого мне еще далеко(((
 
-// Родительский класс GeometricFigure
-class GeometricFigure {
-    let description: String
-    var color: String = "Red"
-    
-    init(description: String) {
-        self.description = description
-    }
-    
-    func calculateArea() -> Double {
-        return 0.0
-    }
-}
-
-// Класс Круг
-class Circle: GeometricFigure {
-    let radius: Double
-    
-    init(radius: Double) {
-        self.radius = radius
-        super.init(description: "Circle")
-        self.color = "Red"
-    }
-    
-    override func calculateArea() -> Double {
-        return Double.pi * radius * radius
-    }
-}
-
-// Класс Квадрат
-class Square: GeometricFigure {
-    let sideLength: Double
-    
-    init(sideLength: Double) {
-        self.sideLength = sideLength
-        super.init(description: "Square")
-        self.color = "Green"
-    }
-    
-    override func calculateArea() -> Double {
-        return sideLength * sideLength
-    }
-}
-
-// Класс Треугольник
-class Triangle: GeometricFigure {
-    let base: Double
-    let height: Double
-    
-    init(base: Double, height: Double) {
-        self.base = base
-        self.height = height
-        super.init(description: "Triangle")
-        self.color = "Red"
-    }
-    
-    override func calculateArea() -> Double {
-        return 0.5 * base * height
-    }
-}
-
-// Класс Трапеция
-class Trapezoid: GeometricFigure {
-    let base1: Double
-    let base2: Double
-    let height: Double
-    
-    init(base1: Double, base2: Double, height: Double) {
-        self.base1 = base1
-        self.base2 = base2
-        self.height = height
-        super.init(description: "Trapezoid")
-        self.color = "Green"
-    }
-    
-    override func calculateArea() -> Double {
-        return 0.5 * (base1 + base2) * height
-    }
-}
-
-// Класс Ромб
-class Rhombus: GeometricFigure {
-    let diagonal1: Double
-    let diagonal2: Double
-    
-    init(diagonal1: Double, diagonal2: Double) {
-        self.diagonal1 = diagonal1
-        self.diagonal2 = diagonal2
-        super.init(description: "Rhombus")
-        self.color = "Red"
-    }
-    
-    override func calculateArea() -> Double {
-        return 0.5 * diagonal1 * diagonal2
-    }
-}
-
-// Создание объектов и вывод результатов
-let circle = Circle(radius: 5.0)
-print("\(circle.description) - Площадь: \(circle.calculateArea()), Цвет: \(circle.color)")
-
-let square = Square(sideLength: 4.0)
-print("\(square.description) - Площадь: \(square.calculateArea()), Цвет: \(square.color)")
-
-let triangle = Triangle(base: 3.0, height: 6.0)
-print("\(triangle.description) - Площадь: \(triangle.calculateArea()), Цвет: \(triangle.color)")
-
-let trapezoid = Trapezoid(base1: 4.0, base2: 6.0, height: 5.0)
-print("\(trapezoid.description) - Площадь: \(trapezoid.calculateArea()), Цвет: \(trapezoid.color)")
-
-let rhombus = Rhombus(diagonal1: 4.0, diagonal2: 6.0)
-print("\(rhombus.description) - Площадь: \(rhombus.calculateArea()), Цвет: \(rhombus.color)")
+//// Родительский класс GeometricFigure
+//class GeometricFigure {
+//    let description: String
+//    var color: String = "Red"
+//    
+//    init(description: String) {
+//        self.description = description
+//    }
+//    
+//    func calculateArea() -> Double {
+//        return 0.0
+//    }
+//}
+//
+//// Класс Круг
+//class Circle: GeometricFigure {
+//    let radius: Double
+//    
+//    init(radius: Double) {
+//        self.radius = radius
+//        super.init(description: "Circle")
+//        self.color = "Red"
+//    }
+//    
+//    override func calculateArea() -> Double {
+//        return Double.pi * radius * radius
+//    }
+//}
+//
+//// Класс Квадрат
+//class Square: GeometricFigure {
+//    let sideLength: Double
+//    
+//    init(sideLength: Double) {
+//        self.sideLength = sideLength
+//        super.init(description: "Square")
+//        self.color = "Green"
+//    }
+//    
+//    override func calculateArea() -> Double {
+//        return sideLength * sideLength
+//    }
+//}
+//
+//// Класс Треугольник
+//class Triangle: GeometricFigure {
+//    let base: Double
+//    let height: Double
+//    
+//    init(base: Double, height: Double) {
+//        self.base = base
+//        self.height = height
+//        super.init(description: "Triangle")
+//        self.color = "Red"
+//    }
+//    
+//    override func calculateArea() -> Double {
+//        return 0.5 * base * height
+//    }
+//}
+//
+//// Класс Трапеция
+//class Trapezoid: GeometricFigure {
+//    let base1: Double
+//    let base2: Double
+//    let height: Double
+//    
+//    init(base1: Double, base2: Double, height: Double) {
+//        self.base1 = base1
+//        self.base2 = base2
+//        self.height = height
+//        super.init(description: "Trapezoid")
+//        self.color = "Green"
+//    }
+//    
+//    override func calculateArea() -> Double {
+//        return 0.5 * (base1 + base2) * height
+//    }
+//}
+//
+//// Класс Ромб
+//class Rhombus: GeometricFigure {
+//    let diagonal1: Double
+//    let diagonal2: Double
+//    
+//    init(diagonal1: Double, diagonal2: Double) {
+//        self.diagonal1 = diagonal1
+//        self.diagonal2 = diagonal2
+//        super.init(description: "Rhombus")
+//        self.color = "Red"
+//    }
+//    
+//    override func calculateArea() -> Double {
+//        return 0.5 * diagonal1 * diagonal2
+//    }
+//}
+//
+//// Создание объектов и вывод результатов
+//let circle = Circle(radius: 5.0)
+//print("\(circle.description) - Площадь: \(circle.calculateArea()), Цвет: \(circle.color)")
+//
+//let square = Square(sideLength: 4.0)
+//print("\(square.description) - Площадь: \(square.calculateArea()), Цвет: \(square.color)")
+//
+//let triangle = Triangle(base: 3.0, height: 6.0)
+//print("\(triangle.description) - Площадь: \(triangle.calculateArea()), Цвет: \(triangle.color)")
+//
+//let trapezoid = Trapezoid(base1: 4.0, base2: 6.0, height: 5.0)
+//print("\(trapezoid.description) - Площадь: \(trapezoid.calculateArea()), Цвет: \(trapezoid.color)")
+//
+//let rhombus = Rhombus(diagonal1: 4.0, diagonal2: 6.0)
+//print("\(rhombus.description) - Площадь: \(rhombus.calculateArea()), Цвет: \(rhombus.color)")
 
 
 // MARK: - Task 8 - Extensions
@@ -792,48 +792,48 @@ print("\(rhombus.description) - Площадь: \(rhombus.calculateArea()), Цв
 // 4. Добавьте типу String метод truncate(length: Int), который определит, что строка длиннее, чем length
 // А затем отсечет лишние символы и заменит их на "..."
 
-extension Int {
-    var isNegative: Bool {
-        return self < 0
-    }
-    
-    var isPositive: Bool {
-        return self > 0
-    }
-    
-    var characterCount: Int {
-        return String(self).count
-    }
-}
-
-
-extension String {
-    func trimText(lenght: Int) -> String {
-        guard lenght <= self.count else {
-            return self
-        }
-        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
-        return String(self[..<endIndex])
-    }
-    
-    func truncate(lenght: Int) -> String {
-        guard self.count > lenght else {
-            return self
-        }
-        let endIndex = self.index(self.startIndex, offsetBy: lenght)
-        return self[..<endIndex] + "..."
-    }
-}
-
-
-let number = 12345
-print(number.isPositive)
-print(number.isNegative)
-print(number.characterCount)
-
-let text = "Hello, world!"
-//print(text.trimText(length: 5))
-print(text.truncate(lenght: 10))
+//extension Int {
+//    var isNegative: Bool {
+//        return self < 0
+//    }
+//    
+//    var isPositive: Bool {
+//        return self > 0
+//    }
+//    
+//    var characterCount: Int {
+//        return String(self).count
+//    }
+//}
+//
+//
+//extension String {
+//    func trimText(lenght: Int) -> String {
+//        guard lenght <= self.count else {
+//            return self
+//        }
+//        let endIndex = self.index(self.endIndex, offsetBy: -lenght)
+//        return String(self[..<endIndex])
+//    }
+//    
+//    func truncate(lenght: Int) -> String {
+//        guard self.count > lenght else {
+//            return self
+//        }
+//        let endIndex = self.index(self.startIndex, offsetBy: lenght)
+//        return self[..<endIndex] + "..."
+//    }
+//}
+//
+//
+//let number = 12345
+//print(number.isPositive)
+//print(number.isNegative)
+//print(number.characterCount)
+//
+//let text = "Hello, world!"
+////print(text.trimText(length: 5))
+//print(text.truncate(lenght: 10))
 
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
@@ -847,47 +847,58 @@ print(text.truncate(lenght: 10))
 // - сколько процентов своей жизни работал артистом - computed property
 
 
-//class Artist {
-//    let name: String
-//    var age: Int {
-//        didSet {
-//            if age < 0 {
-//                age = 0
-//            }
-//        }
-//    }
-//    var countryOfWork: String
-//    var experienceYears: Int
-//    private var weeklySalary: Int?
-//
-//    var dailySalary: Int {
-//        if let weeklySalary = weeklySalary {
-//            return weeklySalary / 7
-//        }
-//        return 80
-//    }
-//
-//    var percentOfWorkLife: Double {
-//        get {
-//            return Double(experienceYears) / Double(age)
-//        }
-//    }
-//
-//    enum Country {
-//        case belarus
-//        case russia
-//        case ukraine
-//        case other(countryName: String)
-//    }
-//
-//    init(name: String, age: Int, countryOfWork: String, experienceYears: Int, weeklySalary: Int?) {
-//        self.name = name
-//        self.age = age
-//        self.countryOfWork = countryOfWork
-//        self.experienceYears = experienceYears
-//        self.weeklySalary = weeklySalary
-//    }
-//}
+// Создаем перечисление для страны работы
+enum WorkCountry {
+    case belarus
+    case russia
+    case ukraine
+    case other(String)
+}
+
+// Базовый класс "Артист"
+class Artist {
+    struct Name {
+        let firstName: String
+        let lastName: String
+    }
+    
+    let name: Name
+    var age: Int {
+        didSet {
+            if age < 0 {
+                age = 0
+            }
+        }
+    }
+    var workCountry: WorkCountry
+    var experience: Int
+    var weeklySalary: Double?
+    var dailySalary: Double {
+        if let weeklySalary = weeklySalary {
+            return weeklySalary / 5
+        } else {
+            return 0
+        }
+    }
+    
+    var percentageOfWorkLife: Double {
+        return Double(experience) / Double(age) * 100
+    }
+    
+    init(name: Name, age: Int, workCountry: WorkCountry, experience: Int, weeklySalary: Double?) {
+        self.name = name
+        self.age = max(0, age)
+        self.workCountry = workCountry
+        self.experience = experience
+        self.weeklySalary = weeklySalary
+    }
+}
+
+// Пример использования
+let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
+let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
+print(artist.dailySalary)
+print(artist.percentageOfWorkLife)
 
 
 /// `Инициализаторы`
@@ -910,6 +921,7 @@ print(text.truncate(lenght: 10))
 
 //некоторые моменты всё еще не смог сделать сам, без помощи интернета
 
+// Класс Артист
 
 //class Musician: Artist {
 //    var favoriteInstrument: String
@@ -919,11 +931,11 @@ print(text.truncate(lenght: 10))
 //        self.favoriteInstrument = favoriteInstrument
 //    }
 //
-//    override static func displayClassName() {
+//    /*override static*/ func displayClassName() {
 //        print("Class name: Musician")
 //    }
 //
-//    override func perform() {
+//    /*override*/ func perform() {
 //        print("Musician performing with their faxvorite instrument: \(favoriteInstrument)")
 //    }
 //}
@@ -935,11 +947,11 @@ print(text.truncate(lenght: 10))
 //        self.dailySalary = dailySalary
 //    }
 //
-//    override static func displayClassName() {
+//    /*override static*/ func displayClassName() {
 //        print("Class name: Dancer")
 //    }
 //
-//    override func perform() {
+//    /*override*/ func perform() {
 //        if dailySalary < 100 {
 //            print("Dancer refuses to perform, the salary is too low")
 //        } else {
@@ -955,11 +967,11 @@ print(text.truncate(lenght: 10))
 //        self.stageName = stageName
 //    }
 //
-//    override static func displayClassName() {
+//    /*override static*/ func displayClassName() {
 //        print("Class name: Painter")
 //    }
 //
-//    override func perform() {
+//    /*override*/ func perform() {
 //        print("Painter performing")
 //    }
 //}
@@ -975,7 +987,7 @@ print(text.truncate(lenght: 10))
 //
 ////Массив типа Артист
 //let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
-
+//
 ////Вызов метода для каждого эллемента
 //for artist in artist {
 //    artist.perform()
@@ -988,47 +1000,49 @@ print(text.truncate(lenght: 10))
 // Подчиниться в extension класса Артист протоколу BusinessTrip.
 // В классе Художник в расширении реализовать метод expressIndignation(), в котором Художник выражает недовольство о необходимости поездки в командировку.
 
-// Создание протокола BusinessTrip
-protocol BusinesTrip {
-    var country: String
-    var duration: Int
-    
-    func startTrip()
-    func endTrip()
-}
-// Реализация расширения по умолчанию для метода
-startTrip()
-extension BusinesTrip {
-    func startTrip() {
-        print("Отправляемся в командировку в \(country) на \(duration) дней.")
-    }
-}
+//// Создание протокола BusinessTrip
+//protocol BusinesTrip {
+//    var country: String
+//    var duration: Int
+//    
+//    func startTrip()
+//    func endTrip()
+//}
+//// Реализация расширения по умолчанию для метода
+//startTrip()
+//extension BusinesTrip {
+//    func startTrip() {
+//        print("Отправляемся в командировку в \(country) на \(duration) дней.")
+//    }
+//}
+//
+//extension Artist: BusinesTrip {
+//    func endTrip() {
+//        print("Завершаем командировку.")
+//    }
+//}
+//
+//// Создание расширения для реализации метода expressIndignation
+//
+//extension Painter: BusinesTrip {
+//    var country: String {
+//        return "Название страны"
+//    }
+//    
+//    var duration: Int {
+//        return 8
+//    }
+//    
+//    func endTrip() {
+//        print("Завершаем командировку.")
+//    }
+//    
+//    func expressIndignation() {
+//        print("Я художник, мне необходимо быть в студии, а не в командировке!")
+//    }
+//}
 
-extension Artist: BusinesTrip {
-    func endTrip() {
-        print("Завершаем командировку.")
-    }
-}
 
-// Создание расширения для реализации метода expressIndignation
-
-extension Painter: BusinesTrip {
-    var country: String {
-        return "Название страны"
-    }
-    
-    var duration: Int {
-        return 8
-    }
-    
-    func endTrip() {
-        print("Завершаем командировку.")
-    }
-    
-    func expressIndignation() {
-        print("Я художник, мне необходимо быть в студии, а не в командировке!")
-    }
-}
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
 
