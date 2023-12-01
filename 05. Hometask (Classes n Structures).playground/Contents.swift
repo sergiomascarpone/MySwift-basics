@@ -873,7 +873,7 @@ class Artist {
     var workCountry: WorkCountry
     var experience: Int
     var weeklySalary: Double?
-    var dailySalary: Double {
+    var daySalary: Double {
         if let weeklySalary = weeklySalary {
             return weeklySalary / 5
         } else {
@@ -897,7 +897,7 @@ class Artist {
 // Пример использования
 let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
 let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
-print(artist.dailySalary)
+print(artist.daySalary)
 print(artist.percentageOfWorkLife)
 
 
