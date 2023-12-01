@@ -988,6 +988,15 @@ print(text.truncate(lenght: 10))
 // Подчиниться в extension класса Артист протоколу BusinessTrip.
 // В классе Художник в расширении реализовать метод expressIndignation(), в котором Художник выражает недовольство о необходимости поездки в командировку.
 
+// Создание протокола BusinessTrip
+protocol BusinesTrip {
+    var country: String
+    var duration: Int
+    
+    func startTrip()
+    func endTrip()
+}
+
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
 
