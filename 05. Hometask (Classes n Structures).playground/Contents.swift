@@ -1025,7 +1025,9 @@ extension Painter: BusinesTrip {
         print("Завершаем командировку.")
     }
     
-    func
+    func expressIndignation() {
+        print("Я художник, мне необходимо быть в студии, а не в командировке!")
+    }
 }
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
