@@ -1045,6 +1045,12 @@ print(artist.percentageOfWorkLife)
 
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
 /// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
+///
+protocol PayableBusinessTrip {
+    
+    var salaryInBusinessTrip: Int
+    var salaryCoefficient: Int
+}
 
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
 // salaryInBusinessTrip вычисляется на основе зарплаты за день (если артист отказался ее называть, то зарплата по умолчанию - 80), помноженной на salaryCoefficient, зависящий от стажа работы:
