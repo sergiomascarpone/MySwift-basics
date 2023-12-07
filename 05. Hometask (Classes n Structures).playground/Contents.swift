@@ -440,6 +440,7 @@ for student in sortedAverageScore {
 
 // MARK: посмотреть
 //Поскольку currentData и currentYear используются только один раз, можно инициализировать их непосредственно в соответствующих выражениях.
+
 //Вместо использования calendar.component(.year, from: currentData) и calendar.component(.month, from: currentData),  можно использовать calendar.dateComponents([.year, .month], from: currentData) для получения сразу нескольких компонентов.
 //Можно использовать условный оператор ? : для более компактного кода.
 
