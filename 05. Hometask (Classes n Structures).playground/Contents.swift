@@ -925,7 +925,6 @@ print(artist.percentageOfWorkLife)
 //некоторые моменты всё еще не смог сделать сам, без помощи интернета
 
 // Класс Артист
-
 //class Musician: Artist {
 //    var favoriteInstrument: String
 //
@@ -945,15 +944,15 @@ print(artist.percentageOfWorkLife)
 //
 //class Dancer: Artist {
 //    var dailySalary: Int
-//
+//    
 //    init(dailySalary: Int) {
 //        self.dailySalary = dailySalary
 //    }
-//
+//    
 //    /*override static*/ func displayClassName() {
 //        print("Class name: Dancer")
 //    }
-//
+//    
 //    /*override*/ func perform() {
 //        if dailySalary < 100 {
 //            print("Dancer refuses to perform, the salary is too low")
@@ -979,22 +978,23 @@ print(artist.percentageOfWorkLife)
 //    }
 //}
 //
-//Создан экземпляров классов
+////Создан экземпляров классов
 //let musician1 = Musician(favoriteInstrument: "Violin")
 //let musician2 = Musician(favoriteInstrument: "Piano")
 //let dancer1 = Dancer(dailySalary: 100)
 //let dancer2 = Dancer(dailySalary: 70)
-//let painter1 = Painter(stageName: "Artiste")
+//let painter1 = Painter(stageName: "Artist")
 //let painter2 = Painter(stageName: "Maestro")
 //
 //
-//Массив типа Артист
-//let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
+//////Массив типа Артист
+//let artists: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
 //
-//Вызов метода для каждого эллемента
-//for artist in artist {
-//    artist.perform()
+////////Вызов метода для каждого эллемента
+//for artist in artists {
+//    artist.self
 //}
+//
 
 
 // 2. Создать протокол BusinessTrip со свойствами страна, продолжительность поездки, методы startTrip(), endTrip() и expressIndignation().
@@ -1011,7 +1011,8 @@ print(artist.percentageOfWorkLife)
 //    func startTrip()
 //    func endTrip()
 //}
-// Реализация расширения по умолчанию для метода
+
+//// Реализация расширения по умолчанию для метода
 //startTrip()
 //extension BusinesTrip {
 //    func startTrip() {
@@ -1025,8 +1026,7 @@ print(artist.percentageOfWorkLife)
 //    }
 //}
 //
-// Создание расширения для реализации метода expressIndignation
-//
+//// Создание расширения для реализации метода expressIndignation
 //extension Painter: BusinesTrip {
 //    var country: String {
 //        return "Название страны"
@@ -1047,19 +1047,22 @@ print(artist.percentageOfWorkLife)
 
 
 // 3. Создать протокол PayableBusinessTrip, наследующийся от протокола BusinessTrip, с новыми computed property - salaryInBusinessTrip, salaryCoefficient.
-/// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
-///
+// properties - `salaryInBusinessTrip`,  `salaryCoefficient` - доступ только на чтение
+//
 //protocol PayableBusinessTrip: BusinesTrip {
 //    
-//    var salaryInBusinessTrip: Int
-//    var salaryCoefficient: Int
+//    var salaryInBusinessTrip: Double {get}
+//    var salaryCoefficient: Double {get}
 //}
 
 
+
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
+
+
 // salaryInBusinessTrip вычисляется на основе зарплаты за день (если артист отказался ее называть, то зарплата по умолчанию - 80), помноженной на salaryCoefficient, зависящий от стажа работы:
-/// - `1-2 года - 1x`,
-/// - `3-5 лет - 1.5x`,
-/// - `> 5 лет -  2x`.
+// - `1-2 года - 1x`,
+// - `3-5 лет - 1.5x`,
+// - `> 5 лет -  2x`.
 // Танцорам повысить salaryInBusinessTrip на 10% и доработать метод startTrip(), исходя из требования танцора о минимальной зарплате в 100.
 
