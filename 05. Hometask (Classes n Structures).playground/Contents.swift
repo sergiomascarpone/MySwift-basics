@@ -516,13 +516,13 @@ for student in sortedAverageScore {
 //       self.weight = max(weight, Person.minWeight)
 //
 //       Person.count += 1
-////        self.name = name
-////        self.lastName = lastName
-////        self.age = age
-////        self.growth = growth
-////        self.weight = weight
-////
-////        Person.count += 1
+//        self.name = name
+//        self.lastName = lastName
+//        self.age = age
+//        self.growth = growth
+//        self.weight = weight
+//
+//        Person.count += 1
 //    }
 //}
 //
@@ -672,7 +672,7 @@ oliviaCat.makeSound()
 
 //ну тут пришлось мне воспользоваться поиском, и полностью всё переделал. Самому конечно до самостоятельного решения такого мне еще далеко(((
 
-//// Родительский класс GeometricFigure
+// Родительский класс GeometricFigure
 //class GeometricFigure {
 //    let description: String
 //    var color: String = "Red"
@@ -686,7 +686,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Класс Круг
+// Класс Круг
 //class Circle: GeometricFigure {
 //    let radius: Double
 //    
@@ -701,7 +701,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Класс Квадрат
+// Класс Квадрат
 //class Square: GeometricFigure {
 //    let sideLength: Double
 //    
@@ -716,7 +716,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Класс Треугольник
+// Класс Треугольник
 //class Triangle: GeometricFigure {
 //    let base: Double
 //    let height: Double
@@ -733,7 +733,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Класс Трапеция
+// Класс Трапеция
 //class Trapezoid: GeometricFigure {
 //    let base1: Double
 //    let base2: Double
@@ -752,7 +752,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Класс Ромб
+// Класс Ромб
 //class Rhombus: GeometricFigure {
 //    let diagonal1: Double
 //    let diagonal2: Double
@@ -769,7 +769,7 @@ oliviaCat.makeSound()
 //    }
 //}
 //
-//// Создание объектов и вывод результатов
+// Создание объектов и вывод результатов
 //let circle = Circle(radius: 5.0)
 //print("\(circle.description) - Площадь: \(circle.calculateArea()), Цвет: \(circle.color)")
 //
@@ -835,12 +835,12 @@ oliviaCat.makeSound()
 //print(number.characterCount)
 //
 //let text = "Hello, world!"
-////print(text.trimText(length: 5))
+//print(text.trimText(length: 5))
 //print(text.truncate(lenght: 10))
 
 // MARK: - Task 9 - Inheritance + Protocol
 // 1. Создайте базовый класс «Артист», у которого должны быть:
-/// `Свойства`
+// `Свойства`
 // - имя (структура) - разрешить только чтение
 // - возраст - сделать проверку на положительное значение
 // - страна работы (Беларусь, Россия, Украина, другое (enum associated value))
@@ -904,7 +904,7 @@ print(artist.daySalary)
 print(artist.percentageOfWorkLife)
 
 
-/// `Инициализаторы`
+// `Инициализаторы`
 // 2 разных инициализатора (имя в каждом инициализаторе - обязательно)
 
 /// `Методы`
@@ -979,7 +979,7 @@ print(artist.percentageOfWorkLife)
 //    }
 //}
 //
-////Создан экземпляров классов
+//Создан экземпляров классов
 //let musician1 = Musician(favoriteInstrument: "Violin")
 //let musician2 = Musician(favoriteInstrument: "Piano")
 //let dancer1 = Dancer(dailySalary: 100)
@@ -988,10 +988,10 @@ print(artist.percentageOfWorkLife)
 //let painter2 = Painter(stageName: "Maestro")
 //
 //
-////Массив типа Артист
+//Массив типа Артист
 //let artist: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
 //
-////Вызов метода для каждого эллемента
+//Вызов метода для каждого эллемента
 //for artist in artist {
 //    artist.perform()
 //}
@@ -1003,7 +1003,7 @@ print(artist.percentageOfWorkLife)
 // Подчиниться в extension класса Артист протоколу BusinessTrip.
 // В классе Художник в расширении реализовать метод expressIndignation(), в котором Художник выражает недовольство о необходимости поездки в командировку.
 
-//// Создание протокола BusinessTrip
+// Создание протокола BusinessTrip
 //protocol BusinesTrip {
 //    var country: String
 //    var duration: Int
@@ -1011,7 +1011,7 @@ print(artist.percentageOfWorkLife)
 //    func startTrip()
 //    func endTrip()
 //}
-//// Реализация расширения по умолчанию для метода
+// Реализация расширения по умолчанию для метода
 //startTrip()
 //extension BusinesTrip {
 //    func startTrip() {
@@ -1025,7 +1025,7 @@ print(artist.percentageOfWorkLife)
 //    }
 //}
 //
-//// Создание расширения для реализации метода expressIndignation
+// Создание расширения для реализации метода expressIndignation
 //
 //extension Painter: BusinesTrip {
 //    var country: String {
