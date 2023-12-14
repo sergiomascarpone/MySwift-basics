@@ -1,5 +1,106 @@
 import UIKit
 
+//let point = (-10, 10)
+//
+//switch point {
+//case let (x, y) where x == y:
+//    print("\(x) and \(y) are equal")
+//
+//case let (x, y) where abs(x) == abs(y):
+//    print("\(x) and \(y) are equal modulo")
+//
+//case let (x, y):
+//    print("\(x) and \(y) are not equal")
+//}
+//print(point)
+
+//var list = ["Scarf", "Jeans", "Sneakers", "Coat", "Jacket"]
+//list.append("Glasses")
+//list.remove(at: 1)
+//
+//var result = [String]()
+//
+//for (position, object) in
+//    list.reversed().enumerated() where position % 2 == 0 {
+//    result.append("\(position): " + object)
+//}
+//print(result)
+
+//let name = "Maria"
+//let a = 3
+//let b = 1
+//
+//for i in 1...5 {
+//    if i > 1 {
+//        break
+//}
+//
+//    if a > b {
+//        if name != "Anna" {
+//            print("1")
+//        } else {
+//            print("2")
+//        }
+//    } else {
+//        print("3")
+//    }
+//}
+
+//enum Operation {
+//  
+//  case add(constant: Int)
+//    case subtract(constant: Int)
+//    case multiply(constant: Int)
+//}
+//
+//let number = 200
+//let operation: Operation = .multiply(constant: 10)
+//
+//switch operation {
+//case .add(let constant) where constant >= 10:
+//    print("Result is \(number + constant)")
+//
+//case .subtract(let constant) where constant >= 10:
+//    print("Result is \(number - constant)")
+//
+//case .multiply(let constant) where constant >= 10:
+//    print("Result is \(number * constant)")
+//
+//default:
+//    print("Incorrent operation")
+//}
+
+//class Counter {
+//    var points: Int = 0 {
+//        willSet {
+//            print("Will set points to \(newValue)")
+//        }
+//        didSet {
+//            if points > oldValue {
+//                print("Added \(points - oldValue) points")
+//            } else if points < oldValue {
+//                print("Substracted \(oldValue  - points) points")
+//            }
+//        }
+//    }
+//}
+
+//func someFunction(_ flag: Bool) -> ([Int]) -> [Int] {
+//    func someFunction1(number: [Int]) -> [Int] {
+//        return number.flatMap { [$0, $0] }
+//    }
+//
+//    func someFunction2(number: [Int]) -> [Int] {
+//        return number.flatMap { [$0, $0, $0] }
+//    }
+//
+//    return flag ? someFunction1 : someFunction2
+//}
+//
+//let function = someFunction(false)
+//let result = function([3, 2, 1])
+//print(result)
+
 // MARK: - Task 1 - Classes + Initialization
 // 1. Создайте 3 любых класса и реализуйте в них инициализаторы разного типа
 
@@ -102,55 +203,55 @@ import UIKit
 
 
 // Класс с базовым инициализатором
-class Person {
-    var name: String
-
-    init(name: String) {
-        self.name = name
-    }
-}
+//class Person {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
 
 // Класс с дополнительным инициализатором
-class Car {
-    var brand: String
-    var model: String
-
-    init(brand: String, model: String) {
-        self.brand = brand
-        self.model = model
-    }
-
-    convenience init(brand: String) {
-        self.init(brand: brand, model: "Unknown")
-    }
-}
+//class Car {
+//    var brand: String
+//    var model: String
+//
+//    init(brand: String, model: String) {
+//        self.brand = brand
+//        self.model = model
+//    }
+//
+//    convenience init(brand: String) {
+//        self.init(brand: brand, model: "Unknown")
+//    }
+//}
 
 // Класс с инициализатором, принимающим опциональный параметр
-class Book {
-    var title: String
-    var author: String
-
-    init(title: String, author: String?) {
-        self.title = title
-        self.author = author ?? "Unknown Author"
-    }
-}
+//class Book {
+//    var title: String
+//    var author: String
+//
+//    init(title: String, author: String?) {
+//        self.title = title
+//        self.author = author ?? "Unknown Author"
+//    }
+//}
 
 // Пример использования классов и их инициализаторов
-let person = Person(name: "John Doe")
-print("Person: \(person.name)")
-
-let car1 = Car(brand: "Toyota", model: "Camry")
-print("Car 1: \(car1.brand) \(car1.model)")
-
-let car2 = Car(brand: "Honda")
-print("Car 2: \(car2.brand) \(car2.model)")
-
-let book1 = Book(title: "The Great Gatsby", author: "F. Scott Fitzgerald")
-print("Book 1: \(book1.title) by \(book1.author)")
-
-let book2 = Book(title: "1984", author: nil)
-print("Book 2: \(book2.title) by \(book2.author)")
+//let person = Person(name: "John Doe")
+//print("Person: \(person.name)")
+//
+//let car1 = Car(brand: "Toyota", model: "Camry")
+//print("Car 1: \(car1.brand) \(car1.model)")
+//
+//let car2 = Car(brand: "Honda")
+//print("Car 2: \(car2.brand) \(car2.model)")
+//
+//let book1 = Book(title: "The Great Gatsby", author: "F. Scott Fitzgerald")
+//print("Book 1: \(book1.title) by \(book1.author)")
+//
+//let book2 = Book(title: "1984", author: nil)
+//print("Book 2: \(book2.title) by \(book2.author)")
 
 
 // MARK: - Task 2 - Structure
@@ -162,33 +263,33 @@ print("Book 2: \(book2.title) by \(book2.author)")
 // Создайте несколько экземпляров этой структуры и заполните их данными.
 // Положите их всех в массив (журнал).
 
-struct Student {
-    let name: String
-    let lastName: String
-    let averageScore: Int
-}
-
-func studentsData(students: [Student]) {
-    for (index, student) in students.enumerated() {
-        let studentNumber = index + 1
-        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
+//struct Student {
+//    let name: String
+//    let lastName: String
+//    let averageScore: Int
+//}
+//
+//func studentsData(students: [Student]) {
+//    for (index, student) in students.enumerated() {
+//        let studentNumber = index + 1
+//        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
 //лишние принты убрать можно
 //        print("Name \(student.name)")
 //        print("LastNme \(student.lastName)")
 //        print("AverageScore \(student.averageScore)")
-    }
-}
-
-
-var students: [Student] = [
-    Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
-    Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
-    Student(name: "Egor", lastName: "Sergeevich", averageScore: 5),
-    Student(name: "Sergey", lastName: "Olegivich", averageScore: 4)
-]
-
-
-studentsData(students: [])
+//    }
+//}
+//
+//
+//var students: [Student] = [
+//    Student(name: "Alesja", lastName: "Nikolaevna", averageScore: 3),
+//    Student(name:"Maksim", lastName: "Borisovich", averageScore: 4),
+//    Student(name: "Egor", lastName: "Sergeevich", averageScore: 5),
+//    Student(name: "Sergey", lastName: "Olegivich", averageScore: 4)
+//]
+//
+//
+//studentsData(students: [])
 
 
 // 2. Напишите функцию, которая принимает массив студентов и выводит в консоль данные каждого.
@@ -215,11 +316,11 @@ studentsData(students: [])
 //Srudent№:4. Name: Sergey. LastName: Olegivich. AverageScore: 4
 //но у меня не получилось, я думал притянуть функцию, но у меня ничего не получалось и всё крашилось((
 
-let sortedAverageScore = students.sorted { $1.averageScore < $0.averageScore }
-print("\nSorted by average score:")
-for student in sortedAverageScore {
-    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
-}
+//let sortedAverageScore = students.sorted { $1.averageScore < $0.averageScore }
+//print("\nSorted by average score:")
+//for student in sortedAverageScore {
+//    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
+//}
 
 // 4. Отсортируйте теперь массив по фамилии (по возрастанию).
 // Eсли фамилии одинаковые, то сравнивайте по имени. Распечатайте “журнал”.
@@ -372,25 +473,22 @@ for student in sortedAverageScore {
 //print(updatedStudentsArray)
 
 // MARK: - Почему по итогу массивы из заданий 2 и 3 менялись / не менялись? Чем это обусловлено?
-
 // Это 5 задание которое я не смог правильно сделать, но если логически подумать, то данные массива должны будут изменится в классе так как класс это ссылочный тип, и остаться неизменным в структуре, так как это значимый тип.
 
 // MARK: по аналогии сделай для классов 5 задание. для структур я написала
 
 // MARK: - Резюмируйте, чем отличаются классы от структур и когда что лучше использовать?
-
 // Структуры это значимый тип, а классы ссылочный тип. Если по документации, то по умолчанию лучше структуры. Нам проще анализировать свой код, так как структура не может быть изменена другой частью кода.
 // С помощью класса, мы можем четко опредеоить родительско-дочернюю связь между классом и подклассом.
 
 
 // MARK: - прочитать
 //Классы - ссылочные типы. Когда вы передаете или присваиваете класс, передается ссылка на объект.
-//Структуры - значимые типы. Они передаются по значению, создавая копию.
-//
 //Классы - могут поддерживать наследование, т.е. создавать подклассы.
-//Структуры - не поддерживают наследование.
-//
 //Классы передаются по ссылке. Изменения в одном экземпляре отражаются на других, так как они ссылаются на один и тот же объект в памяти.
+//
+//Структуры - значимые типы. Они передаются по значению, создавая копию.
+//Структуры - не поддерживают наследование.
 //Структуры передаются по значению. Каждый экземпляр - это отдельная копия данных.
 
 
@@ -598,57 +696,57 @@ for student in sortedAverageScore {
 //
 
 // MARK: вот вариант
-class Cat {
-    private var voice: String?
-
-    var name: String {
-        didSet {
-            /// Ограничиваем изменение имени только для чтения
-            name = oldValue
-        }
-    }
-
-    var color: String
-    var gender: String
-    var size: String
-
-    init(name: String, color: String, gender: String, size: String) {
-        self.name = name
-        self.color = color
-        self.gender = gender
-        self.size = size
-    }
-
-    func makeSound() {
-        if let voice = voice {
-            print("\(name) says \(voice)")
-        } else {
-            print("\(name) is silent")
-        }
-    }
-}
-
-class OrangeCat: Cat {
-
-    init(name: String, gender: String, size: String) {
-        super.init(name: name, color: "Orange", gender: gender, size: size)
-    }
-}
-
-class BlackCat: Cat {
-
-    init(name: String, gender: String, size: String) {
-        super.init(name: name, color: "Black", gender: gender, size: size)
-    }
-}
-
-let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
-print(garfieldCat.name)
-garfieldCat.makeSound()
-
-let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
-print(oliviaCat.name)
-oliviaCat.makeSound()
+//class Cat {
+//    private var voice: String?
+//
+//    var name: String {
+//        didSet {
+//            /// Ограничиваем изменение имени только для чтения
+//            name = oldValue
+//        }
+//    }
+//
+//    var color: String
+//    var gender: String
+//    var size: String
+//
+//    init(name: String, color: String, gender: String, size: String) {
+//        self.name = name
+//        self.color = color
+//        self.gender = gender
+//        self.size = size
+//    }
+//
+//    func makeSound() {
+//        if let voice = voice {
+//            print("\(name) says \(voice)")
+//        } else {
+//            print("\(name) is silent")
+//        }
+//    }
+//}
+//
+//class OrangeCat: Cat {
+//
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Orange", gender: gender, size: size)
+//    }
+//}
+//
+//class BlackCat: Cat {
+//
+//    init(name: String, gender: String, size: String) {
+//        super.init(name: name, color: "Black", gender: gender, size: size)
+//    }
+//}
+//
+//let garfieldCat = OrangeCat(name: "Garfield", gender: "male", size: "small")
+//print(garfieldCat.name)
+//garfieldCat.makeSound()
+//
+//let oliviaCat = BlackCat(name: "Olivia", gender: "female", size: "medium")
+//print(oliviaCat.name)
+//oliviaCat.makeSound()
 
 
 // MARK: - Task 7 - Overriding
@@ -850,58 +948,58 @@ oliviaCat.makeSound()
 // - сколько процентов своей жизни работал артистом - computed property
 
 
-// Создаем перечисление для страны работы
-enum WorkCountry {
-    case belarus
-    case russia
-    case ukraine
-    case other(String)
-}
-
-// Базовый класс "Артист"
-class Artist {
-    struct Name {
-        let firstName: String
-        let lastName: String
-    }
-    
-    let name: Name
-    var age: Int {
-        didSet {
-            if age < 0 {
-                age = 0
-            }
-        }
-    }
-    var workCountry: WorkCountry
-    var experience: Int
-    var weeklySalary: Double?
-    var daySalary: Double {
-        if let weeklySalary = weeklySalary {
-            return weeklySalary / 5
-        } else {
-            return 0
-        }
-    }
-    
-    var percentageOfWorkLife: Double {
-        return Double(experience) / Double(age) * 100
-    }
-    
-    init(name: Name, age: Int, workCountry: WorkCountry, experience: Int, weeklySalary: Double?) {
-        self.name = name
-        self.age = max(0, age)
-        self.workCountry = workCountry
-        self.experience = experience
-        self.weeklySalary = weeklySalary
-    }
-}
-
-// Пример использования
-let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
-let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
-print(artist.daySalary)
-print(artist.percentageOfWorkLife)
+//// Создаем перечисление для страны работы
+//enum WorkCountry {
+//    case belarus
+//    case russia
+//    case ukraine
+//    case other(String)
+//}
+//
+//// Базовый класс "Артист"
+//class Artist {
+//    struct Name {
+//        let firstName: String
+//        let lastName: String
+//    }
+//    
+//    let name: Name
+//    var age: Int {
+//        didSet {
+//            if age < 0 {
+//                age = 0
+//            }
+//        }
+//    }
+//    var workCountry: WorkCountry
+//    var experience: Int
+//    var weeklySalary: Double?
+//    var daySalary: Double {
+//        if let weeklySalary = weeklySalary {
+//            return weeklySalary / 5
+//        } else {
+//            return 0
+//        }
+//    }
+//    
+//    var percentageOfWorkLife: Double {
+//        return Double(experience) / Double(age) * 100
+//    }
+//    
+//    init(name: Name, age: Int, workCountry: WorkCountry, experience: Int, weeklySalary: Double?) {
+//        self.name = name
+//        self.age = max(0, age)
+//        self.workCountry = workCountry
+//        self.experience = experience
+//        self.weeklySalary = weeklySalary
+//    }
+//}
+//
+//// Пример использования
+//let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
+//let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
+//print(artist.daySalary)
+//print(artist.percentageOfWorkLife)
 
 
 // `Инициализаторы`
