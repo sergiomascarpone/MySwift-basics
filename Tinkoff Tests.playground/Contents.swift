@@ -77,11 +77,9 @@ if let input1 = readLine(),
    let number1 = Int(input1),
    let number2 = Int(input2)
 {
-    let sum = 1 + 2
+    let sum = number1 + number2
     print(sum)
 }
-//```
-//
 //Вы можете использовать этот код, чтобы считать два числа из стандартного ввода и напечатать их сумму.
 
 
