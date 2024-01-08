@@ -60,19 +60,33 @@ var someIntArray = [ 100, 222, 12, 19, 89, 94, 1, 3, 5]
 someIntArray.sorted()
 someIntArray.sorted(by: >)
 someIntArray.sorted(by: <)
+// - В развернутом виде
+let ascendingSomeIntArray = someIntArray.sorted(by:{(first, second) -> Bool in
+    return first < second
+})
+let descendingSomeIntArray = someIntArray.sorted(by:{(first, second) -> Bool in
+    return first > second
+})
+
 
 var someDoubleArray = [ 203.33, 100.433, 1.970, 22.11]
-someDoubleArray.sorted()
-someDoubleArray.sorted(by: >)
-someDoubleArray.sorted(by: <)
+// - В неявном виде
+let ascendingSomeDoubleArray = someDoubleArray.sorted(by: {
+    return $0 < $1
+})
+let descendingSomeDoubleArray = someDoubleArray.sorted(by: {
+    return $0 > $1
+})
+
 
 var someStringArray = ["Love", "Devil", "Robot", "Death"]
-someStringArray.sorted()
-someStringArray.sorted(by: >)
-someStringArray.sorted(by: <)
+// - С использование сокращенных имен параметров
+let ascendingSomeStringArray = someStringArray.sorted(by: <)
+let descendingSomeStringArray = someStringArray.sorted(by: >)
 
-
-
+// - В сокращенной форме
+let ascendingSomeIntArrayShortened = someIntArray.sorted { $0 < $1 }
+let descendingSomeIntArrayShortened = someIntArray.sorted{ $0>$1 }
 
 
 // =======================================
