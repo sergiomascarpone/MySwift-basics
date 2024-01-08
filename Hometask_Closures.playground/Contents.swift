@@ -56,7 +56,20 @@ someFunction {
 // =======================================
 
 // ...
+var someIntArray = [ 100, 222, 12, 19, 89, 94, 1, 3, 5]
+someIntArray.sorted()
+someIntArray.sorted(by: >)
+someIntArray.sorted(by: <)
 
+var someDoubleArray = [ 203.33, 100.433, 1.970, 22.11]
+someDoubleArray.sorted()
+someDoubleArray.sorted(by: >)
+someDoubleArray.sorted(by: <)
+
+var someStringArray = ["Love", "Devil", "Robot", "Death"]
+someStringArray.sorted()
+someStringArray.sorted(by: >)
+someStringArray.sorted(by: <)
 
 
 
