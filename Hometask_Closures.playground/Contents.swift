@@ -121,7 +121,7 @@ func findInt(intArray: [Int], closure: (Int, Int?) -> Bool) -> Int? {
 // MARK: - Task 4
 // =======================================
 /*
- 1. Используя строку, проинициализированную ниже, рреобразуйте ее в массив символов
+ 1. Используя строку, проинициализированную ниже, преобразуйте ее в массив символов
  2. Используя метод sorted отсортируйте этот массив символов так, чтобы:
         - вначале шли гласные в алфавитном порядке,
         - потом согласные в алфавитном порядке,
@@ -148,11 +148,38 @@ Swift 5.1 was officially released in September 2019. Swift 5.1 builds on the pre
 
 
 // ...
+//Чесно, я не сог самостоятельно решить это задание, много над ним сидел, думал, искал, и потом нашел 2 способа, но второй не совсем то что нужно.
+
+//let charArray = Array(vereVeryLongText)
+//
+//let vowels = charArray.filter { "aeiouAEIOU".contains($0) }.sorted()
+//let consonants = charArray.filter { "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".contains($0) }.sorted()
+//let numbers = charArray.filter {$0.isNumber}.sorted()
+//let symbols = charArray.filter {!("aeiouAEIOUbcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789".contains($0))}.sorted()
+//
+//let sortedArray = vowels + consonants + numbers + symbols
+//let sortedString = String(sortedArray)
+//print(sortedArray)
 
 
-
-
-
+//func priority (char : Character) -> [Int] {
+//    switch char.lowercased() {
+//    case "a", "e", "i", "o", "u" : return 0
+//    case "a"..."z" : return 1
+//    case "0"..."9" : return 2
+//    default : return 3
+//    }
+//}
+//
+//var newText = vereVeryLongText.sorted {
+//    switch (priority(char: $0),priority(char: $1)) {
+//    case let(x,y) where x < y:
+//        return true
+//    case let(x,y) where x > y:
+//        return false
+//    default: return $0.lowercased() <= $1.lowercased()
+//    }
+//}
 
 
 // =======================================
