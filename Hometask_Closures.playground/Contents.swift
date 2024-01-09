@@ -106,7 +106,9 @@ let descendingSomeIntArrayShortened = someIntArray.sorted{ $0>$1 }
 // =======================================
 
 // ...
-
+func findInt(intArray: [Int], closure: (Int, Int?) -> Bool) -> Int? {
+    
+}
 
 
 
