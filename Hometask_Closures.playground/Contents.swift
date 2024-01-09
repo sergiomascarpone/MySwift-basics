@@ -86,7 +86,7 @@ let descendingSomeStringArray = someStringArray.sorted(by: >)
 
 // - В сокращенной форме
 let ascendingSomeIntArrayShortened = someIntArray.sorted { $0 < $1 }
-let descendingSomeIntArrayShortened = someIntArray.sorted{ $0>$1 }
+let descendingSomeIntArrayShortened = someIntArray.sorted{ $0 > $1 }
 
 
 // =======================================
@@ -210,5 +210,27 @@ let names: [String] = ["Arnold Schwarzenegger",
                        "Duncan MacLeod",
                        "Barbra Streisand"]
 
+//Сам не смог, сделал по примеру
+
+//let sortedNames = names.sorted { $0.count < $1.count }
+//
+//let transformedDictionary = Dictionary(uniqueKeysWithValues: sortedNames.map { ($0.count, String($0.filter { !$0.isWhitespace }.sorted(by: >))) })
+//
+//print(transformedDictionary)
 
 
+let sortedNames = names.sorted { $0.count < $1.count }
+   
+
+//func transformToDictionary( names: [String]) -> [Int: String] {
+//    let dictionary = names.reduce(into: [Int: String]()) { result, name in
+//        let key = name.count
+//        let value = String(name.filter { !$0.isWhitespace }.sorted(by: >))
+//        result[key] = value
+//    }
+//    return dictionary
+//}
+//
+//let sortedNamesByLength = sortNamesByLength(names)
+//let transformedDictionary = transformToDictionary(sortedNamesByLength)
+//print(transformedDictionary)
