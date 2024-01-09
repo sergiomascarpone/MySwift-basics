@@ -107,11 +107,14 @@ let descendingSomeIntArrayShortened = someIntArray.sorted{ $0>$1 }
 
 // ...
 func findInt(intArray: [Int], closure: (Int, Int?) -> Bool) -> Int? {
-    
+    var optVariable: Int?
+    for i in intArray {
+        if closure(i,optVariable) {
+            optVariable = i
+        }
+    }
+    return optVariable
 }
-
-
-
 
 
 // =======================================
