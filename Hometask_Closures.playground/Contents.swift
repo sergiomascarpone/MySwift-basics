@@ -218,14 +218,16 @@ let names: [String] = ["Arnold Schwarzenegger",
 //
 //print(transformedDictionary)
 
+// Преобразование массива имен в словарь
+//let sortedNamesDict = names.reduce(into: [Int: String]()){ result, name in
+//    let charactersCount = name.replacingOccurrences(of: "", with: "").count
+//    let sortedCharacters = String(name.replacingOccurrences(of: "", with: "").sorted { $0 > $1 })
+//    result[charactersCount] = sortedCharacters
+//}
 
-let sortedNamesDict = names.reduce(into: [Int: String]()){ result, name in
-    let charactersCount = name.replacingOccurrences(of: "", with: "").count
-    let sortedCharacters = String(name.replacingOccurrences(of: "", with: "").sorted { $0 > $1 })
-    result[charactersCount] = sortedCharacters
-}
+// Сортировка словаря по возрастанию ключей и преобразование его обратно в массив имен
+//let sortedNames = sortedNamesDict.sorted { $0.key < $1.key }.map { $0.value}
 
-let sortedNames = sortedNamesDict.sorted { $0.key < $1.key }.map { $0.value}
-
-print(sortedNames)
+// Вывод отсортированного массива имен
+//print(sortedNames)
 
