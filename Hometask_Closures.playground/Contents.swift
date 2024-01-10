@@ -16,6 +16,33 @@ reversedetNamess = namess.sorted(by: { s1, s2 in s1 > s2 } )
 reversedetNamess = namess.sorted(by: { $0 > $1 } )
 reversedetNamess = namess.sorted(by: > )
 
+let digitalNames = [
+    0: "Zero", 1: "One", 2: "Two", 3: "Three", 4: "Four",
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+]
+let numbers = [16, 58, 510]
+
+let strings = numbers.map { (num) -> String in
+    var num = num
+    var output = ""
+    repeat {
+        output = digitalNames[num % 10]! + output
+        num /= 10
+    } while num > 0
+    return output
+}
+
+//Автозакрытие — это замыкание, которое автоматически создается для обертывания выражения , передаваемого в качестве аргумента функции. Он не принимает никаких аргументов и при вызове возвращает значение выражения, заключенного внутри него. Это синтаксическое удобство позволяет опускать скобки вокруг параметра функции, записывая обычное выражение вместо явного замыкания.
+
+var customersInLine = ["Chris", "Andy", "Matt", "Eva", "Sandra"]
+print(customersInLine.count)
+
+let customersProvider = { customersInLine.remove(at: 0) }
+print(customersInLine.count)
+
+print("Now serving \(customersProvider())!")
+
+print(customersInLine.count)
 
 // ---------------------------------------
 // MARK: - Домашнее задание
