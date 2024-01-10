@@ -56,6 +56,7 @@ someFunction {
 // =======================================
 
 // ...
+//массива с типам [Int]
 var someIntArray = [ 100, 222, 12, 19, 89, 94, 1, 3, 5]
 someIntArray.sorted()
 someIntArray.sorted(by: >)
@@ -68,7 +69,7 @@ let descendingSomeIntArray = someIntArray.sorted(by:{(first, second) -> Bool in
     return first > second
 })
 
-
+//массив с типам [Double]
 var someDoubleArray = [ 203.33, 100.433, 1.970, 22.11]
 // - В неявном виде
 let ascendingSomeDoubleArray = someDoubleArray.sorted(by: {
@@ -78,7 +79,7 @@ let descendingSomeDoubleArray = someDoubleArray.sorted(by: {
     return $0 > $1
 })
 
-
+//массив с типам [String]
 var someStringArray = ["Love", "Devil", "Robot", "Death"]
 // - С использование сокращенных имен параметров
 let ascendingSomeStringArray = someStringArray.sorted(by: <)
