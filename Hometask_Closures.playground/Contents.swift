@@ -61,7 +61,6 @@ print(customersInLine.count)
  4. Добавьте `print(...)` на каждую итерацию цикла, и в замыкание, а затем оцените очередность выполнения команд */
 
 
-
 // MARK: - Task 1. Solution
 // =======================================
 
@@ -75,8 +74,6 @@ func someFunction(closure: () -> Void) -> () {
 someFunction {
     print("I called closure function")
 }
-
-
 
 
 // =======================================
