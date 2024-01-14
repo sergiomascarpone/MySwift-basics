@@ -1,5 +1,6 @@
 import Foundation
 
+
 //решение примеров по документации...
 let namess = ["Sandra", "Andy", "Patrick", "Danyal", "Serjo"]
 namess.sorted(by: <)
@@ -43,6 +44,7 @@ print(customersInLine.count)
 print("Now serving \(customersProvider())!")
 
 print(customersInLine.count)
+
 
 // ---------------------------------------
 // MARK: - Домашнее задание
