@@ -27,9 +27,6 @@ print(String(format: "%.1f", num[2]))
 print(String(format: "%.1f", num[3]))
 
 
-
-
-
 // MARK: - Task 2
 // В массиве переменных n хранятся трёхзначные числа.
 // Реализуйте программу, вычисляющую и выводящую на экран сумму цифр числа n, сумму всех чисел, среднее арифмитическое, наибольшее и наименьшее из массива число.
@@ -54,7 +51,6 @@ print(Double(sum) / Double(box.count))
 box.min()
 box.max()
 box.count
-
 
 
 // MARK: - Task 3
@@ -201,7 +197,6 @@ for element in array3 {
 print("Количество целых элементов в третьем массиве: \(integerCount1)")
 
 
-
 // MARK: - Task 7
 // Реализуйте программу, в которой создайте словарь и заполните его различными значениями
 // А затем выведите в консоль новый словарь, где все ключи и значения поменялись местами.
@@ -236,9 +231,6 @@ let myRefrigerator: Set<String> = ["apples", "partridge", "pork", "sausage", "gr
 let shortNames = myRefrigerator.filter({ $0.count <= 6 })
 
 print(shortNames)
-
-
-
 
 
 // MARK: - Простые задачи
@@ -325,7 +317,6 @@ if found {
 }
 
 
-
 // MARK: - Task 2
 
 // Создайте словарь из массива, где название месяца - это ключ, а количество дней - значение.
@@ -363,9 +354,6 @@ for key in dictMonth.keys {
         print("\(key) - \(value)")
     }
 }
-
-
-
 
 
 // MARK: - Task 3
@@ -417,6 +405,7 @@ let averageScore = totalScore / remainingStudents.count
 print("Общий балл студентов: \(totalScore)")
 print("Средний балл студентов: \(averageScore)")
 
+
 // MARK: - Task 4
 
 // Создайте словарь типа [String: (Int, Int)?],
@@ -434,7 +423,6 @@ for (key, value) in pointDict {
         print("\(key) kill")
     }
 }
-
 
 
 // MARK: - Task 5.
@@ -455,8 +443,6 @@ let anotherSpace = (loveMovie: "Interstellar", loveScore: 12, loveEat: "Hot Chic
 
 var thirdSpace: (Int, Int) = (mySpace.1, anotherSpace.1)
 print(mySpace.1 - anotherSpace.1)
-
-
 
 
 // MARK: - Сложные задачи
@@ -519,8 +505,6 @@ if iosCoursesGroup < 5 {
 print("Стоимость обучения для \(iosCoursesGroup) студентов: $\(totalPrice)")
 
 
-
-
 // MARK: - Task 2
 
 // Используя массивы, сформируйте группу студентов, готовую посещать курсы.
@@ -581,7 +565,6 @@ if let student = studentsAnsver {
 }
 
 
-
 // MARK: - Task 4
 
 // Реализуйте программу, которая подсчитает полную стоимость обучения всей группы,
@@ -600,8 +583,6 @@ if studentsWithAppleTech.count < 5 {
 } else {
     totalPrice = studentsWithAppleTech.count * lessThanMoreTwelvePeoplePrice
 }
-
-
 
 
 // MARK: - Task 5
@@ -634,8 +615,6 @@ for (index, data) in studentData.enumerated() {
 for (id, student) in students1 {
     print("ID: \(id), Фамилия: \(student.lastName), Возраст: \(student.age), Есть техника Apple: \(student.hasAppleTech)")
 }
-
-
 
 
 // MARK: - Task 6
