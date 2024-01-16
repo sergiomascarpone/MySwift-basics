@@ -365,7 +365,6 @@ for key in dictMonth.keys {
 // В конце посчитайте общий бал и средний бал ребят, которые остались в группе.
 
 
-
 var nameDictionary: [String: Int] = ["Jack": 4, "Tom": 2, "Steve": 5, "Yan": 2, "Adam": 4,]
 
 nameDictionary.updateValue(1, forKey: "Steve")
