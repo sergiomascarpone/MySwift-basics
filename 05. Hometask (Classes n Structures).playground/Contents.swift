@@ -1,6 +1,5 @@
 import UIKit
 
-
 // MARK: - Task 1 - Classes + Initialization
 // 1. Создайте 3 любых класса и реализуйте в них инициализаторы разного типа
 
