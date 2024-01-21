@@ -198,9 +198,9 @@ import UIKit
 //    for (index, student) in students.enumerated() {
 //        let studentNumber = index + 1
 //        print("Srudent№:\(studentNumber). Name: \(student.name). LastName: \(student.lastName). AverageScore: \(student.averageScore)")
-////        print("Name \(student.name)")
-////        print("LastNme \(student.lastName)")
-////        print("AverageScore \(student.averageScore)")
+//        print("Name \(student.name)")
+//        print("LastNme \(student.lastName)")
+//        print("AverageScore \(student.averageScore)")
 //
 //        // ТУТ НЕ БЫЛО ДВУХ СКОБОЧЕК
 //    }
