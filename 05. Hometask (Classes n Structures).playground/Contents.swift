@@ -1022,6 +1022,7 @@ import UIKit
 //    }
 //}
 //
+
 //// Создание расширения для реализации метода expressIndignation
 //extension Painter: BusinesTrip {
 //    var country: String {
@@ -1050,7 +1051,6 @@ import UIKit
 //    var salaryInBusinessTrip: Double {get}
 //    var salaryCoefficient: Double {get}
 //}
-
 
 
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
