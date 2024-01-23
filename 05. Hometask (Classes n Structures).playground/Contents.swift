@@ -973,8 +973,8 @@ import UIKit
 //        print("Painter performing")
 //    }
 //}
-//
-////Создан экземпляров классов
+
+//Создан экземпляров классов
 //let musician1 = Musician(favoriteInstrument: "Violin")
 //let musician2 = Musician(favoriteInstrument: "Piano")
 //let dancer1 = Dancer(dailySalary: 100)
@@ -982,11 +982,11 @@ import UIKit
 //let painter1 = Painter(stageName: "Artist")
 //let painter2 = Painter(stageName: "Maestro")
 //
-//
-//////Массив типа Артист
+
+//Массив типа Артист
 //let artists: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
-//
-////////Вызов метода для каждого эллемента
+
+//Вызов метода для каждого эллемента
 //for artist in artists {
 //    artist.self
 //}
