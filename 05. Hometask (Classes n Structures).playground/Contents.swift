@@ -749,7 +749,7 @@ import UIKit
 //        return 0.5 * (base1 + base2) * height
 //    }
 //}
-//
+
 // Класс Ромб
 //class Rhombus: GeometricFigure {
 //    let diagonal1: Double
@@ -825,8 +825,7 @@ import UIKit
 //        return self[..<endIndex] + "..."
 //    }
 //}
-//
-//
+
 //let number = 12345
 //print(number.isPositive)
 //print(number.isNegative)
@@ -854,7 +853,7 @@ import UIKit
 //    case ukraine
 //    case other(String)
 //}
-//
+
 //// Базовый класс "Артист"
 //class Artist {
 //    struct Name {
