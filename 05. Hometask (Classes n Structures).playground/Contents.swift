@@ -713,7 +713,7 @@ import UIKit
 //        return sideLength * sideLength
 //    }
 //}
-//
+
 // Класс Треугольник
 //class Triangle: GeometricFigure {
 //    let base: Double
