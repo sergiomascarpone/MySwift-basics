@@ -230,7 +230,6 @@ import UIKit
 //for student in sortedByLastName {
 //    print("Student: \(student.name), \(student.lastName), \(student.averageScore)")
 //}
-
 // вот такой еще вариант попробовал в сортировки, но не знаю правильно ли(
 //students.sort {
 //    if $0.lastName == $1.lastName {
