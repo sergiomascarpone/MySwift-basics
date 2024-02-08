@@ -845,7 +845,7 @@ import UIKit
 // - зарплата за день - вычисляется на основе зарплаты в неделю после того, как было установлено новое значение
 // - сколько процентов своей жизни работал артистом - computed property
 
-//// Создаем перечисление для страны работы
+// Создаем перечисление для страны работы
 //enum WorkCountry {
 //    case belarus
 //    case russia
@@ -853,7 +853,7 @@ import UIKit
 //    case other(String)
 //}
 
-//// Базовый класс "Артист"
+// Базовый класс "Артист"
 //class Artist {
 //    struct Name {
 //        let firstName: String
@@ -892,7 +892,7 @@ import UIKit
 //    }
 //}
 //
-//// Пример использования
+// Пример использования
 //let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
 //let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
 //print(artist.daySalary)
@@ -901,7 +901,7 @@ import UIKit
 
 // `Инициализаторы`
 // 2 разных инициализатора (имя в каждом инициализаторе - обязательно)
-/// `Методы`
+// `Методы`
 // статический метод, возвращающий возможные страны проживания артиста. сделать недоступным к переопределению
 // статический метод, выводящий информацию о названии класса в консоль
 // метод с информацией об артисте - выводит все свойства в читаемом виде. недоступен к переопределению
@@ -972,7 +972,7 @@ import UIKit
 //    }
 //}
 
-//Создан экземпляров классов
+// Создан экземпляров классов
 //let musician1 = Musician(favoriteInstrument: "Violin")
 //let musician2 = Musician(favoriteInstrument: "Piano")
 //let dancer1 = Dancer(dailySalary: 100)
@@ -981,10 +981,10 @@ import UIKit
 //let painter2 = Painter(stageName: "Maestro")
 //
 
-//Массив типа Артист
+// Массив типа Артист
 //let artists: [Artist] = [musician1, musician2, dancer1, dancer2, painter1, painter2]
 
-//Вызов метода для каждого эллемента
+// Вызов метода для каждого эллемента
 //for artist in artists {
 //    artist.self
 //}
@@ -1006,7 +1006,7 @@ import UIKit
 //    func endTrip()
 //}
 
-//// Реализация расширения по умолчанию для метода
+// Реализация расширения по умолчанию для метода
 //startTrip()
 //extension BusinesTrip {
 //    func startTrip() {
@@ -1021,7 +1021,7 @@ import UIKit
 //}
 //
 
-//// Создание расширения для реализации метода expressIndignation
+// Создание расширения для реализации метода expressIndignation
 //extension Painter: BusinesTrip {
 //    var country: String {
 //        return "Название страны"
