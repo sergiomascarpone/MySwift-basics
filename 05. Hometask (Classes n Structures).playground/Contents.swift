@@ -1010,10 +1010,13 @@ import UIKit
 //startTrip()
 //extension BusinesTrip {
 //    func startTrip() {
-//        print("Отправляемся в командировку в \(country) на \(duration) дней.")
+//if let dancer = self? as? Dancer, dancer.dailySalary < 100 {
+//    print("Танцор требует повышения зарплаты перед командировкой!")
+//} else {
+//            print("Отправляемся в командировку в \(country) на \(duration) дней.")
 //    }
+//  }
 //}
-//
 //extension Artist: BusinesTrip {
 //    func endTrip() {
 //        print("Завершаем командировку.")
@@ -1072,7 +1075,14 @@ extension Artist: PayableBusinessTrip {
     }
     
     var salaryCoefficient: Double {
-        
+        switch experience {
+        case 1...2:
+            return 1.0
+        case 3...5:
+            return 1.5
+        default:
+            return 2.0
+        }
     }
 }
 
