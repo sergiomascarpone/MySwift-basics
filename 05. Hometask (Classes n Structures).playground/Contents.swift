@@ -854,11 +854,11 @@ import UIKit
 //}
 
 // Базовый класс "Артист"
-//class Artist {
-//    struct Name {
+//struct Name {
 //        let firstName: String
 //        let lastName: String
 //    }
+//class Artist {
 //    
 //    let name: Name
 //    var age: Int {
@@ -893,8 +893,8 @@ import UIKit
 //}
 //
 // Пример использования
-//let artistName = Artist.Name(firstName: "Иван", lastName: "Иванов")
-//let artist = Artist(name: artistName, age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
+//let artistName = Name(firstName: "Иван", lastName: "Иванов")
+//let artist = Artist(name: Name(firstName: "Иван", lastName: "Иванов"), age: 30, workCountry: .russia, experience: 10, weeklySalary: 1000)
 //print(artist.daySalary)
 //print(artist.percentageOfWorkLife)
 
@@ -1046,10 +1046,35 @@ import UIKit
 //
 //protocol PayableBusinessTrip: BusinesTrip {
 //    
-//    var salaryInBusinessTrip: Double {get}
-//    var salaryCoefficient: Double {get}
+//    var salaryInBusinessTrip: Double { get }
+//    var salaryCoefficient: Double { get }
 //}
-
+extension Artist: PayableBusinessTrip {
+    
+    var salaryInBusinessTrip: Double {
+        let dailiSalary = self.daySalary ?? 80
+        let coefficient: Double
+        
+        switch experience {
+        case 1...3:
+            coefficient = 1.0
+        case 3...5:
+            coefficient = 1.5
+        default:
+            coefficient = 2.0
+        }
+        var totalSalary = dailiSalary * coefficient
+        if let dancer = self? as? Dancer {
+            totalSalary += 1.1
+        }
+        
+        return totalSalary
+    }
+    
+    var salaryCoefficient: Double {
+        
+    }
+}
 
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
 
