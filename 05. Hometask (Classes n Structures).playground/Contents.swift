@@ -1052,39 +1052,39 @@ import UIKit
 //    var salaryInBusinessTrip: Double { get }
 //    var salaryCoefficient: Double { get }
 //}
-extension Artist: PayableBusinessTrip {
-    
-    var salaryInBusinessTrip: Double {
-        let dailiSalary = self.daySalary ?? 80
-        let coefficient: Double
-        
-        switch experience {
-        case 1...3:
-            coefficient = 1.0
-        case 3...5:
-            coefficient = 1.5
-        default:
-            coefficient = 2.0
-        }
-        var totalSalary = dailiSalary * coefficient
-        if let dancer = self? as? Dancer {
-            totalSalary += 1.1
-        }
-        
-        return totalSalary
-    }
-    
-    var salaryCoefficient: Double {
-        switch experience {
-        case 1...2:
-            return 1.0
-        case 3...5:
-            return 1.5
-        default:
-            return 2.0
-        }
-    }
-}
+//extension Artist: PayableBusinessTrip {
+//    
+//    var salaryInBusinessTrip: Double {
+//        let dailiSalary = self.daySalary ?? 80
+//        let coefficient: Double
+//        
+//        switch experience {
+//        case 1...3:
+//            coefficient = 1.0
+//        case 3...5:
+//            coefficient = 1.5
+//        default:
+//            coefficient = 2.0
+//        }
+//        var totalSalary = dailiSalary * coefficient
+//        if let dancer = self? as? Dancer {
+//            totalSalary += 1.1
+//        }
+//        
+//        return totalSalary
+//    }
+//    
+//    var salaryCoefficient: Double {
+//        switch experience {
+//        case 1...2:
+//            return 1.0
+//        case 3...5:
+//            return 1.5
+//        default:
+//            return 2.0
+//        }
+//    }
+//}
 
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
 
