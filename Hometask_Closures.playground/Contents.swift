@@ -194,18 +194,18 @@ Swift 5.1 was officially released in September 2019. Swift 5.1 builds on the pre
 //let charArray = Array(vereVeryLongText)
 //
 //let vowels = charArray.filter { "aeiouAEIOU".contains($0) }.sorted()
-//let consonants = charArray.filter { "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".contains($0) }.sorted()
+//let consonants = charArray.filter { $0.filter && !"aeiouAEIOU".contains($0) }.sorted()
 //let numbers = charArray.filter {$0.isNumber}.sorted()
-//let symbols = charArray.filter {!("aeiouAEIOUbcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789".contains($0))}.sorted()
+//let symbols = charArray.filter { !$0.isLetter && !$0.isNumber }.sorted()
 //
 //let sortedArray = vowels + consonants + numbers + symbols
 //let sortedString = String(sortedArray)
-//print(sortedArray)
+//print(sortedString)
 
 
-//func priority (char : Character) -> [Int] {
+//func priority(char: Character) -> Int {
 //    switch char.lowercased() {
-//    case "a", "e", "i", "o", "u" : return 0
+//    case "a", "e", "i", "o", "u": return 0
 //    case "a"..."z" : return 1
 //    case "0"..."9" : return 2
 //    default : return 3
