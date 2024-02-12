@@ -206,22 +206,15 @@ Swift 5.1 was officially released in September 2019. Swift 5.1 builds on the pre
 //func priority(char: Character) -> Int {
 //    switch char.lowercased() {
 //    case "a", "e", "i", "o", "u": return 0
-//    case "a"..."z" : return 1
-//    case "0"..."9" : return 2
-//    default : return 3
+//    case "a"..."z": return 1
+//    case "0"..."9": return 2
+//    default: return 3
 //    }
 //}
 //
-//var newText = vereVeryLongText.sorted {
-//    switch (priority(char: $0),priority(char: $1)) {
-//    case let(x,y) where x < y:
-//        return true
-//    case let(x,y) where x > y:
-//        return false
-//    default: return $0.lowercased() <= $1.lowercased()
-//    }
+//var newText = vereVeryLongText.sorted { (first, second) in
+//return priority(char: first) < priority(char: second) || (priority(char: first) == priority(char: second) && first.lowercased() <= second.lowercased())
 //}
-
 
 // =======================================
 // MARK: - Task 5*
