@@ -24,7 +24,6 @@ class LaunchViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
@@ -33,8 +32,8 @@ class LaunchViewController: UIViewController {
             imageView.image = UIImage(named: "Sphere")
             imageView.contentMode = .center
             imageView.alpha = 0.8
+            
             imageView.translatesAutoresizingMaskIntoConstraints = false
-    
             return imageView
         }()
     
@@ -45,7 +44,6 @@ class LaunchViewController: UIViewController {
         loadingView.contentMode = .scaleAspectFill
         
         loadingView.translatesAutoresizingMaskIntoConstraints = false
-        
         return loadingView
     }()
     
@@ -55,7 +53,6 @@ class LaunchViewController: UIViewController {
         loadingView.contentMode = .scaleAspectFill
         
         loadingView.translatesAutoresizingMaskIntoConstraints = false
-        
         return loadingView
     }()
     

@@ -36,7 +36,6 @@ class GameViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
@@ -105,7 +104,6 @@ class GameViewController: UIViewController {
         redButton.setTitleColor(.black, for: .normal)
         redButton.layer.cornerRadius = 2
         redButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
-        
         redButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         
         redButton.translatesAutoresizingMaskIntoConstraints = false
@@ -115,10 +113,10 @@ class GameViewController: UIViewController {
     func setupRedButton() {
         view.addSubview(redButton)
         
-        redButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 310).isActive = true
+        redButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 310).isActive         = true
         redButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -30).isActive = true
-        redButton.heightAnchor.constraint(equalToConstant: 40).isActive               = true
-        redButton.widthAnchor.constraint(equalToConstant: 40).isActive               = true
+        redButton.heightAnchor.constraint(equalToConstant: 40).isActive                         = true
+        redButton.widthAnchor.constraint(equalToConstant: 40).isActive                          = true
     }
     
     let greenButton: UIButton = {
@@ -127,7 +125,6 @@ class GameViewController: UIViewController {
         green.setTitleColor(.black, for: .normal)
         green.layer.cornerRadius = 0
         green.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
-        
         green.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         
         green.translatesAutoresizingMaskIntoConstraints = false
@@ -137,10 +134,10 @@ class GameViewController: UIViewController {
     func setupGreenButton() {
         view.addSubview(greenButton)
         
-        greenButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 310).isActive = true
+        greenButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 310).isActive        = true
         greenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 30).isActive = true
-        greenButton.heightAnchor.constraint(equalToConstant: 40).isActive               = true
-        greenButton.widthAnchor.constraint(equalToConstant: 40).isActive               = true
+        greenButton.heightAnchor.constraint(equalToConstant: 40).isActive                        = true
+        greenButton.widthAnchor.constraint(equalToConstant: 40).isActive                         = true
     }
     
     let blueButton: UIButton = {
@@ -149,7 +146,6 @@ class GameViewController: UIViewController {
         blue.setTitleColor(.black, for: .normal)
         blue.layer.cornerRadius = 0
         blue.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
-        
         blue.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         
         blue.translatesAutoresizingMaskIntoConstraints = false
@@ -159,10 +155,10 @@ class GameViewController: UIViewController {
     func setupBlueButton() {
         view.addSubview(blueButton)
         
-        blueButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 350).isActive = true
+        blueButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 350).isActive         = true
         blueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -30).isActive = true
-        blueButton.heightAnchor.constraint(equalToConstant: 40).isActive               = true
-        blueButton.widthAnchor.constraint(equalToConstant: 40).isActive               = true
+        blueButton.heightAnchor.constraint(equalToConstant: 40).isActive                         = true
+        blueButton.widthAnchor.constraint(equalToConstant: 40).isActive                          = true
     }
     
     let yellowButton: UIButton = {
@@ -171,7 +167,6 @@ class GameViewController: UIViewController {
         yellow.setTitleColor(.black, for: .normal)
         yellow.layer.cornerRadius = 0
         yellow.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
-        
         yellow.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         
         yellow.translatesAutoresizingMaskIntoConstraints = false
@@ -181,10 +176,10 @@ class GameViewController: UIViewController {
     func setupYellowButton() {
         view.addSubview(yellowButton)
         
-        yellowButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 350).isActive = true
+        yellowButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 350).isActive        = true
         yellowButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 30).isActive = true
-        yellowButton.heightAnchor.constraint(equalToConstant: 40).isActive               = true
-        yellowButton.widthAnchor.constraint(equalToConstant: 40).isActive               = true
+        yellowButton.heightAnchor.constraint(equalToConstant: 40).isActive                        = true
+        yellowButton.widthAnchor.constraint(equalToConstant: 40).isActive                         = true
     }
     
     func playSequence() {

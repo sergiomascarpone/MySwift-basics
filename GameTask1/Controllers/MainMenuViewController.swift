@@ -28,7 +28,6 @@ class MainMenuViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
@@ -40,7 +39,6 @@ class MainMenuViewController: UIViewController {
         imageView.alpha = 0.7
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         return imageView
     }()
     
@@ -62,7 +60,6 @@ class MainMenuViewController: UIViewController {
         loadingView.contentMode = .scaleAspectFit
         
         loadingView.translatesAutoresizingMaskIntoConstraints = false
-        
         return loadingView
     }()
     
@@ -75,6 +72,7 @@ class MainMenuViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -138,19 +136,19 @@ class MainMenuViewController: UIViewController {
         view.addSubview(playNowButton)
         
         playNowButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -190).isActive = true
-        playNowButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
-        playNowButton.heightAnchor.constraint(equalToConstant: 50).isActive               = true
-        playNowButton.widthAnchor.constraint(equalToConstant: 300).isActive               = true
+        playNowButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive  = true
+        playNowButton.heightAnchor.constraint(equalToConstant: 50).isActive                        = true
+        playNowButton.widthAnchor.constraint(equalToConstant: 300).isActive                        = true
     }
     
     
     func setupPrivacyButton() {
         view.addSubview(privacyButtom)
         
-        privacyButtom.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        privacyButtom.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive          = true
         privacyButtom.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 150).isActive = true
-        privacyButtom.heightAnchor.constraint(equalToConstant: 60).isActive               = true
-        privacyButtom.widthAnchor.constraint(equalToConstant: 60).isActive               = true
+        privacyButtom.heightAnchor.constraint(equalToConstant: 60).isActive                         = true
+        privacyButtom.widthAnchor.constraint(equalToConstant: 60).isActive                          = true
     }
     
     
