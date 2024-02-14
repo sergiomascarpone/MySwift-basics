@@ -1086,6 +1086,7 @@ import UIKit
 //    }
 //}
 
+
 // Подчиниться в классе Артист протоколу PayableBusinessTrip в уже имеющемся extension.
 
 

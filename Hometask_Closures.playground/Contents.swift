@@ -244,7 +244,6 @@ let names: [String] = ["Arnold Schwarzenegger",
                        "Duncan MacLeod",
                        "Barbra Streisand"]
 
-
 // Сам не смог, сделал по примеру:
 
 //let sortedNames = names.sorted { $0.count < $1.count }
