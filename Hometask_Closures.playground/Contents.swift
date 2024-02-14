@@ -245,23 +245,25 @@ let names: [String] = ["Arnold Schwarzenegger",
                        "Barbra Streisand"]
 
 
-//Сам не смог, сделал по примеру
+// Сам не смог, сделал по примеру:
+
 //let sortedNames = names.sorted { $0.count < $1.count }
 //
 //let transformedDictionary = Dictionary(uniqueKeysWithValues: sortedNames.map { ($0.count, String($0.filter { !$0.isWhitespace }.sorted(by: >))) })
-//
 //print(transformedDictionary)
 
 // Преобразование массива имен в словарь
-//let sortedNamesDict = names.reduce(into: [Int: String]()){ result, name in
-//    let charactersCount = name.replacingOccurrences(of: "", with: "").count
-//    let sortedCharacters = String(name.replacingOccurrences(of: "", with: "").sorted { $0 > $1 })
-//    result[charactersCount] = sortedCharacters
-//}
 
-// Сортировка словаря по возрастанию ключей и преобразование его обратно в массив имен
+//let namesDictionary = Dictionary(uniqueKeysWithValues: sortedNames.map { name in
+//    let sortedName = String(name.sorted(by: >).filter { $0 != " "})
+//    return (name.count, sortedName)
+//})
+
+// Сортировка словаря по возрастанию ключей и преобразование его обратно в массив имен:
+
 //let sortedNames = sortedNamesDict.sorted { $0.key < $1.key }.map { $0.value}
 
 // Вывод отсортированного массива имен
 //print(sortedNames)
+//print(namesDictionary)
 
