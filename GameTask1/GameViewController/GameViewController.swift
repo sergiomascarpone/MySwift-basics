@@ -265,7 +265,7 @@ class GameViewController: UIViewController {
     
     @objc private func allTimeButtonTapped() {
         let viewController = YouWinViewController()
-        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalPresentationStyle = .automatic
         self.present(viewController, animated: true)
 
     }
