@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B94BDDA2B7FB8F50074F908 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94BDD92B7FB8F50074F908 /* GamePresenter.swift */; };
+		1B94BDDC2B7FB9030074F908 /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94BDDB2B7FB9030074F908 /* GamePresenterProtocol.swift */; };
 		1BDB73F52B7D550C00E6D2D2 /* B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1BDB73EE2B7D550C00E6D2D2 /* B.wav */; };
 		1BDB73F62B7D550C00E6D2D2 /* F.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1BDB73EF2B7D550C00E6D2D2 /* F.wav */; };
 		1BDB73F72B7D550C00E6D2D2 /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1BDB73F02B7D550C00E6D2D2 /* A.wav */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B94BDD92B7FB8F50074F908 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		1B94BDDB2B7FB9030074F908 /* GamePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterProtocol.swift; sourceTree = "<group>"; };
 		1BDB73EE2B7D550C00E6D2D2 /* B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = B.wav; sourceTree = "<group>"; };
 		1BDB73EF2B7D550C00E6D2D2 /* F.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = F.wav; sourceTree = "<group>"; };
 		1BDB73F02B7D550C00E6D2D2 /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
@@ -73,6 +77,16 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		1B94BDD82B7FB8B70074F908 /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BE1DBD22B7B70F500AAA545 /* GameViewController.swift */,
+				1B94BDD92B7FB8F50074F908 /* GamePresenter.swift */,
+				1B94BDDB2B7FB9030074F908 /* GamePresenterProtocol.swift */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
 		1BE1DBAF2B7B709B00AAA545 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +106,7 @@
 		1BE1DBBA2B7B709B00AAA545 /* GameTask1 */ = {
 			isa = PBXGroup;
 			children = (
+				1B94BDD82B7FB8B70074F908 /* GameViewController */,
 				1B91EB3D2B7CC4540082FD0D /* Sounds */,
 				1BE1DBCF2B7B70CC00AAA545 /* Controllers */,
 				1BE1DBBB2B7B709B00AAA545 /* AppDelegate.swift */,
@@ -109,7 +124,6 @@
 			children = (
 				1BE1DBBF2B7B709B00AAA545 /* LaunchViewController.swift */,
 				1BE1DBD02B7B70E800AAA545 /* MainMenuViewController.swift */,
-				1BE1DBD22B7B70F500AAA545 /* GameViewController.swift */,
 				1BE1DBD42B7B710500AAA545 /* YouWinViewController.swift */,
 				1BE1DBD62B7BB83500AAA545 /* PrivacyPolicyViewController.swift */,
 			);
@@ -194,7 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B94BDDA2B7FB8F50074F908 /* GamePresenter.swift in Sources */,
 				1BE1DBD32B7B70F500AAA545 /* GameViewController.swift in Sources */,
+				1B94BDDC2B7FB9030074F908 /* GamePresenterProtocol.swift in Sources */,
 				1BE1DBD72B7BB83500AAA545 /* PrivacyPolicyViewController.swift in Sources */,
 				1BE1DBD12B7B70E800AAA545 /* MainMenuViewController.swift in Sources */,
 				1BE1DBC02B7B709B00AAA545 /* LaunchViewController.swift in Sources */,

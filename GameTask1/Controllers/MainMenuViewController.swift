@@ -153,7 +153,7 @@ class MainMenuViewController: UIViewController {
     
     
     @objc private func playButtonTapped() {
-        let viewController = GameViewController()
+        let viewController = GameViewController(presenter: GamePresenter())
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true)
 

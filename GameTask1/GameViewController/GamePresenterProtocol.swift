@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol GamePresenterProtocol {
+    var delegate: GamePresenterResultDelegate? { get set }
+    var currentIndex: Int { get set }
+    
+    func setBgColor()
+}

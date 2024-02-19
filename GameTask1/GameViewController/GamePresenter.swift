@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol GamePresenterResultDelegate {
+    func updateBgColor()
+}
+
+final class GamePresenter: GamePresenterProtocol {
+    var delegate: GamePresenterResultDelegate?
+    var currentIndex = 0
+    
+    func setBgColor() {
+        self.delegate?.updateBgColor()
+    }
+}
